@@ -81,7 +81,7 @@ public class LoginPage extends javax.swing.JFrame {
         eduSyncSlogan.setText("<html>\ntrack academic progress<br> seamlessly\n</html>");
         sidePanel.add(eduSyncSlogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
-        ccstLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\CCSTLOGOFINAL.png")); // NOI18N
+        ccstLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CCSTLOGOFINAL.png"))); // NOI18N
         ccstLogo.setText("jLabel1");
         sidePanel.add(ccstLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 220, -1));
 
@@ -94,14 +94,14 @@ public class LoginPage extends javax.swing.JFrame {
         loginPanel.setBackground(new java.awt.Color(51, 51, 51));
         loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\contacts-xxl.png")); // NOI18N
+        userIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contacts-xxl.png"))); // NOI18N
         loginPanel.add(userIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 130, -1));
 
         passPanel.setBackground(new java.awt.Color(153, 153, 153));
         passPanel.setOpaque(false);
         passPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        smallKeyIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\smallKey.png")); // NOI18N
+        smallKeyIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smallKey.png"))); // NOI18N
         smallKeyIcon.setText("jLabel1");
         passPanel.add(smallKeyIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
 
@@ -117,7 +117,7 @@ public class LoginPage extends javax.swing.JFrame {
         emailPanel.setOpaque(false);
         emailPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        smallUserIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\miniUserIcon.png")); // NOI18N
+        smallUserIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniUserIcon.png"))); // NOI18N
         smallUserIcon.setText("jLabel1");
         emailPanel.add(smallUserIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
 
@@ -158,19 +158,19 @@ public class LoginPage extends javax.swing.JFrame {
         });
         loginPanel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 140, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\Ballpen.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ballpen.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         loginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 110, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\Search.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Search.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         loginPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 110, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\Document.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Document.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         loginPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 380, 100, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\OpenBook.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/OpenBook.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         loginPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 90, -1));
 

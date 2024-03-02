@@ -6,10 +6,12 @@ package com.mycompany.interfacetest;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.LayoutManager;
 import java.awt.RenderingHints;
+import java.io.File;
 import javax.swing.JPanel;
 
 /**
@@ -23,6 +25,30 @@ public class LoginPage extends javax.swing.JFrame {
      */
     public LoginPage() {
         initComponents();
+        
+        try{
+            // Import fonts
+            File importTitleFont = new File("src/main/resources/Fonts/Anton-Regular.ttf");
+            File importBodyFont = new File("src/main/resources/Fonts/MajorMonoDisplay-Regular.ttf");
+            File importAccentFont = new File("src/main/resources/Fonts/OpenSans-Regular.ttf");
+            
+            // Assign fonts to variables, set font size
+            Font titleFont = Font.createFont(Font.TRUETYPE_FONT, importTitleFont).deriveFont(60f);
+            Font bodyFont = Font.createFont(Font.TRUETYPE_FONT, importBodyFont).deriveFont(18f);
+            Font accentFont = Font.createFont(Font.TRUETYPE_FONT, importAccentFont).deriveFont(14f);
+            
+            // Set font for UI
+            eduSyncTitle.setFont(titleFont);
+            eduSyncSlogan.setFont(bodyFont);
+            emailLabel.setFont(accentFont);
+            passLabel.setFont(accentFont);
+            
+            loginButton.setFont(Font.createFont(Font.TRUETYPE_FONT, importAccentFont).deriveFont(24f));
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
     }
 
     /**
@@ -74,7 +100,7 @@ public class LoginPage extends javax.swing.JFrame {
         eduSyncTitle.setFont(new java.awt.Font("Anton", 0, 60)); // NOI18N
         eduSyncTitle.setForeground(new java.awt.Color(255, 255, 255));
         eduSyncTitle.setText("EduSync");
-        sidePanel.add(eduSyncTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+        sidePanel.add(eduSyncTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
 
         eduSyncSlogan.setFont(new java.awt.Font("Major Mono Display", 0, 18)); // NOI18N
         eduSyncSlogan.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,11 +108,9 @@ public class LoginPage extends javax.swing.JFrame {
         sidePanel.add(eduSyncSlogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
         ccstLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CCSTLOGOFINAL.png"))); // NOI18N
-        ccstLogo.setText("jLabel1");
         sidePanel.add(ccstLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 220, -1));
 
-        sidePanelBgImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\avery\\OneDrive\\Desktop\\ICONS\\bg2.png")); // NOI18N
-        sidePanelBgImage.setText("jLabel1");
+        sidePanelBgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bg2.png"))); // NOI18N
         sidePanel.add(sidePanelBgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, -1));
 
         bgPanel.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -102,7 +126,6 @@ public class LoginPage extends javax.swing.JFrame {
         passPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         smallKeyIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smallKey.png"))); // NOI18N
-        smallKeyIcon.setText("jLabel1");
         passPanel.add(smallKeyIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
 
         passPaneSeparator.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -118,7 +141,6 @@ public class LoginPage extends javax.swing.JFrame {
         emailPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         smallUserIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniUserIcon.png"))); // NOI18N
-        smallUserIcon.setText("jLabel1");
         emailPanel.add(smallUserIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
 
         emailPaneSeparator.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -159,19 +181,15 @@ public class LoginPage extends javax.swing.JFrame {
         loginPanel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 140, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ballpen.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
         loginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 110, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Search.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
         loginPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 110, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Document.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
         loginPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 380, 100, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/OpenBook.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
         loginPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 90, -1));
 
         jLabel5.setForeground(new java.awt.Color(0, 153, 0));

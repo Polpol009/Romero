@@ -235,7 +235,7 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-        System.out.println("Hello world");
+        
     }//GEN-LAST:event_jLabel5MouseClicked
 
     /**

@@ -83,12 +83,12 @@ public class Mainpage extends javax.swing.JFrame {
         navbarUsername = new javax.swing.JLabel();
         navbarEdusyncTitle = new javax.swing.JLabel();
         mainPageTabbedPane = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        tabbedPaneExamIndex = new javax.swing.JPanel();
+        tabbedPaneHomeworksIndex = new javax.swing.JPanel();
+        tabbedPaneClasslistIndex = new javax.swing.JPanel();
+        tabbedPaneSectionsIndex = new javax.swing.JPanel();
+        tabbedPaneAttendanceIndex = new javax.swing.JPanel();
+        tabbedPaneHomeIndex = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -278,83 +278,83 @@ public class Mainpage extends javax.swing.JFrame {
 
         backgroundPanel.add(mainPageNavbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 80));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tabbedPaneExamIndexLayout = new javax.swing.GroupLayout(tabbedPaneExamIndex);
+        tabbedPaneExamIndex.setLayout(tabbedPaneExamIndexLayout);
+        tabbedPaneExamIndexLayout.setHorizontalGroup(
+            tabbedPaneExamIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        tabbedPaneExamIndexLayout.setVerticalGroup(
+            tabbedPaneExamIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Home", jPanel1);
+        mainPageTabbedPane.addTab("Exam/QUiz", tabbedPaneExamIndex);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tabbedPaneHomeworksIndexLayout = new javax.swing.GroupLayout(tabbedPaneHomeworksIndex);
+        tabbedPaneHomeworksIndex.setLayout(tabbedPaneHomeworksIndexLayout);
+        tabbedPaneHomeworksIndexLayout.setHorizontalGroup(
+            tabbedPaneHomeworksIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        tabbedPaneHomeworksIndexLayout.setVerticalGroup(
+            tabbedPaneHomeworksIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Exam/QUiz", jPanel2);
+        mainPageTabbedPane.addTab("Homeworks", tabbedPaneHomeworksIndex);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tabbedPaneClasslistIndexLayout = new javax.swing.GroupLayout(tabbedPaneClasslistIndex);
+        tabbedPaneClasslistIndex.setLayout(tabbedPaneClasslistIndexLayout);
+        tabbedPaneClasslistIndexLayout.setHorizontalGroup(
+            tabbedPaneClasslistIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        tabbedPaneClasslistIndexLayout.setVerticalGroup(
+            tabbedPaneClasslistIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Homeworks", jPanel3);
+        mainPageTabbedPane.addTab("Class List", tabbedPaneClasslistIndex);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tabbedPaneSectionsIndexLayout = new javax.swing.GroupLayout(tabbedPaneSectionsIndex);
+        tabbedPaneSectionsIndex.setLayout(tabbedPaneSectionsIndexLayout);
+        tabbedPaneSectionsIndexLayout.setHorizontalGroup(
+            tabbedPaneSectionsIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        tabbedPaneSectionsIndexLayout.setVerticalGroup(
+            tabbedPaneSectionsIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Class List", jPanel4);
+        mainPageTabbedPane.addTab("Sections", tabbedPaneSectionsIndex);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tabbedPaneAttendanceIndexLayout = new javax.swing.GroupLayout(tabbedPaneAttendanceIndex);
+        tabbedPaneAttendanceIndex.setLayout(tabbedPaneAttendanceIndexLayout);
+        tabbedPaneAttendanceIndexLayout.setHorizontalGroup(
+            tabbedPaneAttendanceIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        tabbedPaneAttendanceIndexLayout.setVerticalGroup(
+            tabbedPaneAttendanceIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Sections", jPanel5);
+        mainPageTabbedPane.addTab("Attendance", tabbedPaneAttendanceIndex);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tabbedPaneHomeIndexLayout = new javax.swing.GroupLayout(tabbedPaneHomeIndex);
+        tabbedPaneHomeIndex.setLayout(tabbedPaneHomeIndexLayout);
+        tabbedPaneHomeIndexLayout.setHorizontalGroup(
+            tabbedPaneHomeIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        tabbedPaneHomeIndexLayout.setVerticalGroup(
+            tabbedPaneHomeIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Attendance", jPanel6);
+        mainPageTabbedPane.addTab("Home", tabbedPaneHomeIndex);
 
         backgroundPanel.add(mainPageTabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 910, 590));
 
@@ -522,12 +522,6 @@ public class Mainpage extends javax.swing.JFrame {
     private javax.swing.JLabel homeworkSidePanelIcon;
     private javax.swing.JPanel homeworksSidePanelButton;
     private javax.swing.JLabel homeworksSidePanelLabel;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel mainPageNavbar;
     private javax.swing.JPanel mainPageSidePanel;
@@ -538,6 +532,12 @@ public class Mainpage extends javax.swing.JFrame {
     private javax.swing.JPanel sectionsSidePanelButton;
     private javax.swing.JLabel sectionsSidePanelIcon;
     private javax.swing.JLabel sectionsSidePanelLabel;
+    private javax.swing.JPanel tabbedPaneAttendanceIndex;
+    private javax.swing.JPanel tabbedPaneClasslistIndex;
+    private javax.swing.JPanel tabbedPaneExamIndex;
+    private javax.swing.JPanel tabbedPaneHomeIndex;
+    private javax.swing.JPanel tabbedPaneHomeworksIndex;
+    private javax.swing.JPanel tabbedPaneSectionsIndex;
     private javax.swing.JLabel userProfileIcon;
     // End of variables declaration//GEN-END:variables
 }

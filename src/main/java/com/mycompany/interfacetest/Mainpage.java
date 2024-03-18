@@ -66,9 +66,6 @@ public class Mainpage extends javax.swing.JFrame {
         homeworksSidePanelButton = new javax.swing.JPanel();
         homeworksSidePanelLabel = new javax.swing.JLabel();
         homeworkSidePanelIcon = new javax.swing.JLabel();
-        classlistSidePanelButton = new javax.swing.JPanel();
-        classlistSidePanelLabel = new javax.swing.JLabel();
-        classListSidePanelIcon = new javax.swing.JLabel();
         sectionsSidePanelButton = new javax.swing.JPanel();
         sectionsSidePanelLabel = new javax.swing.JLabel();
         sectionsSidePanelIcon = new javax.swing.JLabel();
@@ -82,13 +79,14 @@ public class Mainpage extends javax.swing.JFrame {
         userProfileIcon = new javax.swing.JLabel();
         navbarUsername = new javax.swing.JLabel();
         navbarEdusyncTitle = new javax.swing.JLabel();
-        mainPageTabbedPane = new javax.swing.JTabbedPane();
+        mainPageAttendance = new javax.swing.JTabbedPane();
+        tabbedPaneHomeIndex = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        mainPageCCSTLogo = new javax.swing.JLabel();
         tabbedPaneExamIndex = new javax.swing.JPanel();
-        tabbedPaneHomeworksIndex = new javax.swing.JPanel();
         tabbedPaneClasslistIndex = new javax.swing.JPanel();
         tabbedPaneSectionsIndex = new javax.swing.JPanel();
         tabbedPaneAttendanceIndex = new javax.swing.JPanel();
-        tabbedPaneHomeIndex = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,7 +128,7 @@ public class Mainpage extends javax.swing.JFrame {
 
         examQuizSidePanelLabel.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         examQuizSidePanelLabel.setForeground(new java.awt.Color(255, 255, 255));
-        examQuizSidePanelLabel.setText("Exam/Quiz");
+        examQuizSidePanelLabel.setText("Dashboard");
         examSidePanelButton.add(examQuizSidePanelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 70));
 
         examSidePanelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/examSidePanelIcon.png"))); // NOI18N
@@ -154,37 +152,13 @@ public class Mainpage extends javax.swing.JFrame {
 
         homeworksSidePanelLabel.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         homeworksSidePanelLabel.setForeground(new java.awt.Color(255, 255, 255));
-        homeworksSidePanelLabel.setText("Homeworks");
+        homeworksSidePanelLabel.setText("Students");
         homeworksSidePanelButton.add(homeworksSidePanelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 60));
 
-        homeworkSidePanelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/homeworksSidePanelIcon.png"))); // NOI18N
+        homeworkSidePanelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/Students.png"))); // NOI18N
         homeworksSidePanelButton.add(homeworkSidePanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, -1));
 
         mainPageSidePanel.add(homeworksSidePanelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 240, 70));
-
-        classlistSidePanelButton.setBackground(new java.awt.Color(51, 51, 51));
-        classlistSidePanelButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                classlistSidePanelButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                classlistSidePanelButtonMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                classlistSidePanelButtonMousePressed(evt);
-            }
-        });
-        classlistSidePanelButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        classlistSidePanelLabel.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
-        classlistSidePanelLabel.setForeground(new java.awt.Color(255, 255, 255));
-        classlistSidePanelLabel.setText("Class List");
-        classlistSidePanelButton.add(classlistSidePanelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 70));
-
-        classListSidePanelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/classListSidePanelIcon.png"))); // NOI18N
-        classlistSidePanelButton.add(classListSidePanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, -1));
-
-        mainPageSidePanel.add(classlistSidePanelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 240, 70));
 
         sectionsSidePanelButton.setBackground(new java.awt.Color(51, 51, 51));
         sectionsSidePanelButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -208,7 +182,7 @@ public class Mainpage extends javax.swing.JFrame {
         sectionsSidePanelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/sectionsSidePanelIcon.png"))); // NOI18N
         sectionsSidePanelButton.add(sectionsSidePanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, -1));
 
-        mainPageSidePanel.add(sectionsSidePanelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 240, 70));
+        mainPageSidePanel.add(sectionsSidePanelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 240, 70));
 
         attendanceSidePanelButton.setBackground(new java.awt.Color(51, 51, 51));
         attendanceSidePanelButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,7 +206,7 @@ public class Mainpage extends javax.swing.JFrame {
         attendanceSidePanelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/attendanceSidePanelIcon.png"))); // NOI18N
         attendanceSidePanelButton.add(attendanceSidePanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, -1));
 
-        mainPageSidePanel.add(attendanceSidePanelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 240, 70));
+        mainPageSidePanel.add(attendanceSidePanelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 240, 70));
 
         homeSidePanelButton.setBackground(new java.awt.Color(51, 51, 51));
         homeSidePanelButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -278,6 +252,20 @@ public class Mainpage extends javax.swing.JFrame {
 
         backgroundPanel.add(mainPageNavbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 80));
 
+        tabbedPaneHomeIndex.setBackground(new java.awt.Color(80, 80, 80));
+        tabbedPaneHomeIndex.setForeground(new java.awt.Color(80, 80, 80));
+        tabbedPaneHomeIndex.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Welcome to our Student Management System!");
+        tabbedPaneHomeIndex.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
+
+        mainPageCCSTLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CCSTLOGOFINAL.png"))); // NOI18N
+        tabbedPaneHomeIndex.add(mainPageCCSTLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 220, -1));
+
+        mainPageAttendance.addTab("Home", tabbedPaneHomeIndex);
+
         javax.swing.GroupLayout tabbedPaneExamIndexLayout = new javax.swing.GroupLayout(tabbedPaneExamIndex);
         tabbedPaneExamIndex.setLayout(tabbedPaneExamIndexLayout);
         tabbedPaneExamIndexLayout.setHorizontalGroup(
@@ -289,20 +277,7 @@ public class Mainpage extends javax.swing.JFrame {
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Exam/QUiz", tabbedPaneExamIndex);
-
-        javax.swing.GroupLayout tabbedPaneHomeworksIndexLayout = new javax.swing.GroupLayout(tabbedPaneHomeworksIndex);
-        tabbedPaneHomeworksIndex.setLayout(tabbedPaneHomeworksIndexLayout);
-        tabbedPaneHomeworksIndexLayout.setHorizontalGroup(
-            tabbedPaneHomeworksIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 908, Short.MAX_VALUE)
-        );
-        tabbedPaneHomeworksIndexLayout.setVerticalGroup(
-            tabbedPaneHomeworksIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
-        );
-
-        mainPageTabbedPane.addTab("Homeworks", tabbedPaneHomeworksIndex);
+        mainPageAttendance.addTab("Dashboard", tabbedPaneExamIndex);
 
         javax.swing.GroupLayout tabbedPaneClasslistIndexLayout = new javax.swing.GroupLayout(tabbedPaneClasslistIndex);
         tabbedPaneClasslistIndex.setLayout(tabbedPaneClasslistIndexLayout);
@@ -315,7 +290,7 @@ public class Mainpage extends javax.swing.JFrame {
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Class List", tabbedPaneClasslistIndex);
+        mainPageAttendance.addTab("Class List", tabbedPaneClasslistIndex);
 
         javax.swing.GroupLayout tabbedPaneSectionsIndexLayout = new javax.swing.GroupLayout(tabbedPaneSectionsIndex);
         tabbedPaneSectionsIndex.setLayout(tabbedPaneSectionsIndexLayout);
@@ -328,7 +303,7 @@ public class Mainpage extends javax.swing.JFrame {
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Sections", tabbedPaneSectionsIndex);
+        mainPageAttendance.addTab("Sections", tabbedPaneSectionsIndex);
 
         javax.swing.GroupLayout tabbedPaneAttendanceIndexLayout = new javax.swing.GroupLayout(tabbedPaneAttendanceIndex);
         tabbedPaneAttendanceIndex.setLayout(tabbedPaneAttendanceIndexLayout);
@@ -341,22 +316,9 @@ public class Mainpage extends javax.swing.JFrame {
             .addGap(0, 564, Short.MAX_VALUE)
         );
 
-        mainPageTabbedPane.addTab("Attendance", tabbedPaneAttendanceIndex);
+        mainPageAttendance.addTab("Attendance", tabbedPaneAttendanceIndex);
 
-        javax.swing.GroupLayout tabbedPaneHomeIndexLayout = new javax.swing.GroupLayout(tabbedPaneHomeIndex);
-        tabbedPaneHomeIndex.setLayout(tabbedPaneHomeIndexLayout);
-        tabbedPaneHomeIndexLayout.setHorizontalGroup(
-            tabbedPaneHomeIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 908, Short.MAX_VALUE)
-        );
-        tabbedPaneHomeIndexLayout.setVerticalGroup(
-            tabbedPaneHomeIndexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
-        );
-
-        mainPageTabbedPane.addTab("Home", tabbedPaneHomeIndex);
-
-        backgroundPanel.add(mainPageTabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 910, 590));
+        backgroundPanel.add(mainPageAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 910, 590));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -401,16 +363,6 @@ public class Mainpage extends javax.swing.JFrame {
         homeworksSidePanelButton.setBackground(new Color(51,51,51));
     }//GEN-LAST:event_homeworksSidePanelButtonMouseExited
 
-    private void classlistSidePanelButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_classlistSidePanelButtonMouseEntered
-        // TODO add your handling code here:
-        classlistSidePanelButton.setBackground(new Color(80,80,80));
-    }//GEN-LAST:event_classlistSidePanelButtonMouseEntered
-
-    private void classlistSidePanelButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_classlistSidePanelButtonMouseExited
-        // TODO add your handling code here:
-        classlistSidePanelButton.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_classlistSidePanelButtonMouseExited
-
     private void sectionsSidePanelButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sectionsSidePanelButtonMouseEntered
         // TODO add your handling code here:
         sectionsSidePanelButton.setBackground(new Color(80,80,80));
@@ -433,12 +385,12 @@ public class Mainpage extends javax.swing.JFrame {
 
     private void examSidePanelButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_examSidePanelButtonMousePressed
         // TODO add your handling code here:
-        mainPageTabbedPane.setSelectedIndex(1);
+        mainPageAttendance.setSelectedIndex(1);
     }//GEN-LAST:event_examSidePanelButtonMousePressed
 
     private void homeSidePanelButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeSidePanelButtonMousePressed
         // TODO add your handling code here:
-        mainPageTabbedPane.setSelectedIndex(0);
+        mainPageAttendance.setSelectedIndex(0);
     }//GEN-LAST:event_homeSidePanelButtonMousePressed
 
     private void homeSidePanelButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeSidePanelButtonMouseEntered
@@ -453,22 +405,17 @@ public class Mainpage extends javax.swing.JFrame {
 
     private void homeworksSidePanelButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeworksSidePanelButtonMousePressed
         // TODO add your handling code here:
-        mainPageTabbedPane.setSelectedIndex(2);
+        mainPageAttendance.setSelectedIndex(2);
     }//GEN-LAST:event_homeworksSidePanelButtonMousePressed
-
-    private void classlistSidePanelButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_classlistSidePanelButtonMousePressed
-        // TODO add your handling code here:
-        mainPageTabbedPane.setSelectedIndex(3);
-    }//GEN-LAST:event_classlistSidePanelButtonMousePressed
 
     private void sectionsSidePanelButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sectionsSidePanelButtonMousePressed
         // TODO add your handling code here:
-        mainPageTabbedPane.setSelectedIndex(4);
+        mainPageAttendance.setSelectedIndex(4);
     }//GEN-LAST:event_sectionsSidePanelButtonMousePressed
 
     private void attendanceSidePanelButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_attendanceSidePanelButtonMousePressed
         // TODO add your handling code here:
-        mainPageTabbedPane.setSelectedIndex(5);
+        mainPageAttendance.setSelectedIndex(5);
     }//GEN-LAST:event_attendanceSidePanelButtonMousePressed
 
     /**
@@ -511,9 +458,6 @@ public class Mainpage extends javax.swing.JFrame {
     private javax.swing.JLabel attendanceSidePanelIcon;
     private javax.swing.JLabel attendanceSidePanelLabel;
     private javax.swing.JPanel backgroundPanel;
-    private javax.swing.JLabel classListSidePanelIcon;
-    private javax.swing.JPanel classlistSidePanelButton;
-    private javax.swing.JLabel classlistSidePanelLabel;
     private javax.swing.JLabel examQuizSidePanelLabel;
     private javax.swing.JPanel examSidePanelButton;
     private javax.swing.JLabel examSidePanelIcon;
@@ -522,10 +466,12 @@ public class Mainpage extends javax.swing.JFrame {
     private javax.swing.JLabel homeworkSidePanelIcon;
     private javax.swing.JPanel homeworksSidePanelButton;
     private javax.swing.JLabel homeworksSidePanelLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTabbedPane mainPageAttendance;
+    private javax.swing.JLabel mainPageCCSTLogo;
     private javax.swing.JPanel mainPageNavbar;
     private javax.swing.JPanel mainPageSidePanel;
-    private javax.swing.JTabbedPane mainPageTabbedPane;
     private javax.swing.JLabel mainpageHomeIcon;
     private javax.swing.JLabel navbarEdusyncTitle;
     private javax.swing.JLabel navbarUsername;
@@ -536,7 +482,6 @@ public class Mainpage extends javax.swing.JFrame {
     private javax.swing.JPanel tabbedPaneClasslistIndex;
     private javax.swing.JPanel tabbedPaneExamIndex;
     private javax.swing.JPanel tabbedPaneHomeIndex;
-    private javax.swing.JPanel tabbedPaneHomeworksIndex;
     private javax.swing.JPanel tabbedPaneSectionsIndex;
     private javax.swing.JLabel userProfileIcon;
     // End of variables declaration//GEN-END:variables

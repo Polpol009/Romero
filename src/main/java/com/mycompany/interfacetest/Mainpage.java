@@ -34,7 +34,6 @@ public class Mainpage extends javax.swing.JFrame {
             homeSidePanelText.setFont(accentFont.deriveFont(16f));
             examQuizSidePanelLabel.setFont(accentFont.deriveFont(Font.BOLD, 18f));
             homeworksSidePanelButton.setFont(accentFont.deriveFont(Font.BOLD, 18f));
-            classlistSidePanelButton.setFont(accentFont.deriveFont(Font.BOLD, 18f));
             sectionsSidePanelButton.setFont(accentFont.deriveFont(Font.BOLD, 18f));
             attendanceSidePanelButton.setFont(accentFont.deriveFont(Font.BOLD, 18f));
             

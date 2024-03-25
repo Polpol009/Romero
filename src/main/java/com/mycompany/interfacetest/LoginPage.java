@@ -12,6 +12,11 @@ import java.awt.Graphics2D;
 import java.awt.LayoutManager;
 import java.awt.RenderingHints;
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -42,6 +47,8 @@ public class LoginPage extends javax.swing.JFrame {
             eduSyncSlogan.setFont(bodyFont);
             emailLabel.setFont(accentFont);
             passLabel.setFont(accentFont);
+            notAMemberLabel.setFont(Font.createFont(Font.TRUETYPE_FONT, importAccentFont).deriveFont(12f));
+            createAnAccountLabel.setFont(Font.createFont(Font.TRUETYPE_FONT, importAccentFont).deriveFont(12f));
             
             loginButton.setFont(Font.createFont(Font.TRUETYPE_FONT, importAccentFont).deriveFont(24f));
             
@@ -60,34 +67,31 @@ public class LoginPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         bgPanel = new javax.swing.JPanel();
         sidePanel = new javax.swing.JPanel();
         eduSyncTitle = new javax.swing.JLabel();
         eduSyncSlogan = new javax.swing.JLabel();
         ccstLogo = new javax.swing.JLabel();
-        sidePanelBgImage = new javax.swing.JLabel();
-        loginPanel = new javax.swing.JPanel();
+        loginPanel = new RoundedPanel(15, new Color(70,131,166, 200));
         userIcon = new javax.swing.JLabel();
-        passPanel = new RoundedPanel(15,new Color(38, 55, 120));
-        smallKeyIcon = new javax.swing.JLabel();
-        passPaneSeparator = new javax.swing.JLabel();
+        passPanel = new RoundedPanel(15,new Color(225, 225, 225 ));
         passField = new javax.swing.JPasswordField();
-        emailPanel = new RoundedPanel(15,new Color(38, 55, 120));
-        smallUserIcon = new javax.swing.JLabel();
-        emailPaneSeparator = new javax.swing.JLabel();
-        emailField = new javax.swing.JTextField();
+        emailPanel = new RoundedPanel(15, new Color(225, 225, 225));
+        usernameField = new javax.swing.JTextField();
         passLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
-        bgPenIcon = new javax.swing.JLabel();
-        bgSearchIcon = new javax.swing.JLabel();
-        bgDocumentIcon = new javax.swing.JLabel();
-        bgOpenBookIcon = new javax.swing.JLabel();
-        signupHereLabel = new javax.swing.JLabel();
-        signUpText = new javax.swing.JLabel();
+        jPanel1 = new RoundedPanel(15, new Color(255, 255, 255, 200));
+        notAMemberLabel = new javax.swing.JLabel();
+        createAnAccountLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
+        jScrollPane1.setViewportView(jEditorPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("EduSync ");
+        setTitle("EduSync - Login");
         setResizable(false);
 
         bgPanel.setBackground(new java.awt.Color(51, 51, 51));
@@ -107,72 +111,59 @@ public class LoginPage extends javax.swing.JFrame {
         eduSyncSlogan.setText("<html>\ntrack academic progress<br> seamlessly\n</html>");
         sidePanel.add(eduSyncSlogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
-        ccstLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CCSTLOGOFINAL.png"))); // NOI18N
-        sidePanel.add(ccstLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 220, -1));
-
-        sidePanelBgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bg2.png"))); // NOI18N
-        sidePanel.add(sidePanelBgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, -1));
+        ccstLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/newlogo.png"))); // NOI18N
+        sidePanel.add(ccstLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 220, -1));
 
         bgPanel.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        loginPanel.setBackground(new java.awt.Color(51, 51, 51));
+        loginPanel.setBackground(new java.awt.Color(70, 131, 166));
+        loginPanel.setOpaque(false);
         loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         userIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contacts-xxl.png"))); // NOI18N
-        loginPanel.add(userIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 130, -1));
+        loginPanel.add(userIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 130, -1));
 
-        passPanel.setBackground(new java.awt.Color(153, 153, 153));
+        passPanel.setBackground(new java.awt.Color(255, 255, 255));
         passPanel.setOpaque(false);
         passPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        smallKeyIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smallKey.png"))); // NOI18N
-        passPanel.add(smallKeyIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
-
-        passPaneSeparator.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        passPaneSeparator.setForeground(new java.awt.Color(255, 255, 255));
-        passPaneSeparator.setText("|");
-        passPanel.add(passPaneSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 30, 30));
-
+        passField.setBackground(new java.awt.Color(223, 223, 223));
         passField.setForeground(new java.awt.Color(38, 55, 120));
+        passField.setBorder(null);
         passField.setCaretColor(new java.awt.Color(38, 55, 120));
-        passPanel.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 180, 30));
+        passPanel.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 240, 40));
 
-        loginPanel.add(passPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 260, 50));
+        loginPanel.add(passPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 260, 40));
 
-        emailPanel.setBackground(new java.awt.Color(153, 153, 153));
+        emailPanel.setBackground(new java.awt.Color(255, 255, 255));
         emailPanel.setOpaque(false);
         emailPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        smallUserIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniUserIcon.png"))); // NOI18N
-        emailPanel.add(smallUserIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
-
-        emailPaneSeparator.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        emailPaneSeparator.setForeground(new java.awt.Color(255, 255, 255));
-        emailPaneSeparator.setText("|");
-        emailPanel.add(emailPaneSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 30, 30));
-
-        emailField.setForeground(new java.awt.Color(38, 55, 120));
-        emailField.setCaretColor(new java.awt.Color(38, 55, 120));
-        emailField.addActionListener(new java.awt.event.ActionListener() {
+        usernameField.setBackground(new java.awt.Color(223, 223, 223));
+        usernameField.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        usernameField.setForeground(new java.awt.Color(38, 55, 120));
+        usernameField.setBorder(null);
+        usernameField.setCaretColor(new java.awt.Color(38, 55, 120));
+        usernameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailFieldActionPerformed(evt);
+                usernameFieldActionPerformed(evt);
             }
         });
-        emailPanel.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 180, 30));
+        emailPanel.add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 240, 40));
 
-        loginPanel.add(emailPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 260, 50));
+        loginPanel.add(emailPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 260, -1));
 
         passLabel.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
         passLabel.setForeground(new java.awt.Color(255, 255, 255));
-        passLabel.setText("Pass");
-        loginPanel.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        passLabel.setText("Password");
+        loginPanel.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, 20));
 
         emailLabel.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
         emailLabel.setForeground(new java.awt.Color(255, 255, 255));
-        emailLabel.setText("Email");
-        loginPanel.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+        emailLabel.setText("Username");
+        loginPanel.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
 
-        loginButton.setBackground(new java.awt.Color(38, 55, 120));
+        loginButton.setBackground(new java.awt.Color(56, 182, 255));
         loginButton.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
@@ -183,43 +174,39 @@ public class LoginPage extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
-        loginPanel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 140, 50));
+        loginPanel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 140, 50));
 
-        bgPenIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ballpen.png"))); // NOI18N
-        loginPanel.add(bgPenIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 110, -1));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bgSearchIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Search.png"))); // NOI18N
-        loginPanel.add(bgSearchIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 110, -1));
+        notAMemberLabel.setForeground(new java.awt.Color(0, 0, 0));
+        notAMemberLabel.setText("Not a member?");
+        jPanel1.add(notAMemberLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
 
-        bgDocumentIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Document.png"))); // NOI18N
-        loginPanel.add(bgDocumentIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 380, 100, -1));
-
-        bgOpenBookIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/OpenBook.png"))); // NOI18N
-        loginPanel.add(bgOpenBookIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 90, -1));
-
-        signupHereLabel.setForeground(new java.awt.Color(0, 153, 0));
-        signupHereLabel.setText("here");
-        signupHereLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        signupHereLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+        createAnAccountLabel.setForeground(new java.awt.Color(56, 182, 255));
+        createAnAccountLabel.setText("Create an Account");
+        createAnAccountLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        createAnAccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                signupHereLabelMouseClicked(evt);
+                createAnAccountLabelMouseClicked(evt);
             }
         });
-        loginPanel.add(signupHereLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, -1, -1));
+        jPanel1.add(createAnAccountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
-        signUpText.setForeground(new java.awt.Color(255, 255, 255));
-        signUpText.setText("Or sign up");
-        loginPanel.add(signUpText, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, -1, -1));
+        loginPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 440, 40));
 
-        bgPanel.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 360, 570));
+        bgPanel.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 440, 520));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/newbgimage.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        bgPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(bgPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,20 +217,41 @@ public class LoginPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
+    private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailFieldActionPerformed
+    }//GEN-LAST:event_usernameFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+        String loginUsername = usernameField.getText();
+        String loginPassword = passField.getText();
         
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/UserLogin", "Admin", "user123");
+            String sqlquery = "SELECT * FROM login.login_credentials WHERE username='"+loginUsername+"' AND userpassword='"+loginPassword+"'"; 
+            PreparedStatement pst = conn.prepareStatement(sqlquery);
+            ResultSet rs = pst.executeQuery();
+            
+            if(!rs.next()){
+                JOptionPane.showMessageDialog(null, "Invalid username or password.");
+            }else {
+                JOptionPane.showMessageDialog(null, "Login successful.");
+                this.dispose();
+                new Mainpage().show();
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_loginButtonActionPerformed
 
-    private void signupHereLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupHereLabelMouseClicked
+    private void createAnAccountLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAnAccountLabelMouseClicked
         // TODO add your handling code here:
+        this.dispose();
         SignUp signupPage = new SignUp();
         signupPage.setVisible(true);
-    }//GEN-LAST:event_signupHereLabelMouseClicked
+    }//GEN-LAST:event_createAnAccountLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -281,31 +289,26 @@ public class LoginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bgDocumentIcon;
-    private javax.swing.JLabel bgOpenBookIcon;
     private javax.swing.JPanel bgPanel;
-    private javax.swing.JLabel bgPenIcon;
-    private javax.swing.JLabel bgSearchIcon;
     private javax.swing.JLabel ccstLogo;
+    private javax.swing.JLabel createAnAccountLabel;
     private javax.swing.JLabel eduSyncSlogan;
     private javax.swing.JLabel eduSyncTitle;
-    private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
-    private javax.swing.JLabel emailPaneSeparator;
     private javax.swing.JPanel emailPanel;
+    private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginPanel;
+    private javax.swing.JLabel notAMemberLabel;
     private javax.swing.JPasswordField passField;
     private javax.swing.JLabel passLabel;
-    private javax.swing.JLabel passPaneSeparator;
     private javax.swing.JPanel passPanel;
     private javax.swing.JPanel sidePanel;
-    private javax.swing.JLabel sidePanelBgImage;
-    private javax.swing.JLabel signUpText;
-    private javax.swing.JLabel signupHereLabel;
-    private javax.swing.JLabel smallKeyIcon;
-    private javax.swing.JLabel smallUserIcon;
     private javax.swing.JLabel userIcon;
+    private javax.swing.JTextField usernameField;
     // End of variables declaration//GEN-END:variables
     class RoundedPanel extends JPanel
     {

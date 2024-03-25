@@ -88,6 +88,7 @@ public class Mainpage extends javax.swing.JFrame {
         tabbedPaneAttendanceIndex = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("EduSync");
 
         backgroundPanel.setBackground(new java.awt.Color(80, 80, 80));
         backgroundPanel.setForeground(new java.awt.Color(51, 51, 51));

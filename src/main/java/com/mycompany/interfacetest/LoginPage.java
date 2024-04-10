@@ -238,7 +238,9 @@ public class LoginPage extends javax.swing.JFrame {
             }else {
                 JOptionPane.showMessageDialog(null, "Login successful.");
                 this.dispose();
-                new Mainpage().show();
+                newMainPage newMainPage = new newMainPage();
+                newMainPage.dashboardUsernameLabel.setText("Hello " + loginUsername);
+                newMainPage.show();
             }
             
         } catch (Exception e) {

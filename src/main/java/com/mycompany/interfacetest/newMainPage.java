@@ -57,6 +57,9 @@ public class newMainPage extends javax.swing.JFrame {
             mainPageDesc2.setFont(accentFont.deriveFont(14f));
             mainPageDesc3.setFont(accentFont.deriveFont(14f));
             
+            dashboardGreetingsLabel.setFont(accentFont.deriveFont(24f));
+            dashboardUsernameLabel.setFont(titleFont.deriveFont(36f));
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -109,6 +112,8 @@ public class newMainPage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         dashboardBackgroundPanel = new javax.swing.JPanel();
         dashboardMainPanel = new RoundedPanel(15, new Color(70,131,166, 220));
+        dashboardUsernameLabel = new javax.swing.JLabel();
+        dashboardGreetingsLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -304,20 +309,21 @@ public class newMainPage extends javax.swing.JFrame {
 
         mainPagePanels.addTab("ddd", homeBackgroundPanel);
 
+        dashboardBackgroundPanel.setOpaque(false);
         dashboardBackgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dashboardMainPanel.setBackground(new java.awt.Color(70, 131, 166));
+        dashboardMainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout dashboardMainPanelLayout = new javax.swing.GroupLayout(dashboardMainPanel);
-        dashboardMainPanel.setLayout(dashboardMainPanelLayout);
-        dashboardMainPanelLayout.setHorizontalGroup(
-            dashboardMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        dashboardMainPanelLayout.setVerticalGroup(
-            dashboardMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
-        );
+        dashboardUsernameLabel.setFont(new java.awt.Font("Anton", 0, 36)); // NOI18N
+        dashboardUsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardUsernameLabel.setText("[user]");
+        dashboardMainPanel.add(dashboardUsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+
+        dashboardGreetingsLabel.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        dashboardGreetingsLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardGreetingsLabel.setText("Good Day,");
+        dashboardMainPanel.add(dashboardGreetingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
         dashboardBackgroundPanel.add(dashboardMainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 800, 630));
 
@@ -361,6 +367,9 @@ public class newMainPage extends javax.swing.JFrame {
         
         // set icon for selected home button
         miniHomeIcon.setIcon(homeSelectedIcon);
+        
+        // set index for tabbed pane
+        mainPagePanels.setSelectedIndex(0);
     }//GEN-LAST:event_sidePanelHomeButtonMouseClicked
 
     private void sidePanelDashButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidePanelDashButton1MouseClicked
@@ -382,6 +391,9 @@ public class newMainPage extends javax.swing.JFrame {
         
         // set icon for selected dashboard
         miniDashboardIcon.setIcon(dashboardSelectedIcon);
+        
+        // set index for tabbed pane
+        mainPagePanels.setSelectedIndex(1);
     }//GEN-LAST:event_sidePanelDashButton1MouseClicked
 
     private void sidePanelStudentButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidePanelStudentButton1MouseClicked
@@ -483,8 +495,10 @@ public class newMainPage extends javax.swing.JFrame {
     private javax.swing.JLabel attendanceSelector;
     private javax.swing.JPanel background;
     private javax.swing.JPanel dashboardBackgroundPanel;
+    private javax.swing.JLabel dashboardGreetingsLabel;
     private javax.swing.JPanel dashboardMainPanel;
     private javax.swing.JLabel dashboardSelector;
+    public javax.swing.JLabel dashboardUsernameLabel;
     private javax.swing.JLabel edusyncSidePanelTitle;
     private javax.swing.JPanel homeBackgroundPanel;
     private javax.swing.JPanel homeMainPanel;

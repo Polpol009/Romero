@@ -44,11 +44,15 @@ public class newMainPage extends javax.swing.JFrame {
             File importTitleFont = new File("src/main/resources/Fonts/Anton-Regular.ttf");
             File importBodyFont = new File("src/main/resources/Fonts/MajorMonoDisplay-Regular.ttf");
             File importAccentFont = new File("src/main/resources/Fonts/OpenSans-Regular.ttf");
+            File importLightNumFont = new File("src/main/resources/Fonts/Lato-Light.ttf");
+            File importNumFont = new File("src/main/resources/Fonts/Lato-Black.ttf");
             
             // Assign fonts to variables, set font size
             Font titleFont = Font.createFont(Font.TRUETYPE_FONT, importTitleFont);
             Font bodyFont = Font.createFont(Font.TRUETYPE_FONT, importBodyFont);
             Font accentFont = Font.createFont(Font.TRUETYPE_FONT, importAccentFont);
+            Font lightNumFont = Font.createFont(Font.TRUETYPE_FONT, importLightNumFont);
+            Font numFont = Font.createFont(Font.TRUETYPE_FONT, importNumFont);
             
             // Set Fonts
             homePageWelcomeLabel.setFont(titleFont.deriveFont(36f));
@@ -74,6 +78,7 @@ public class newMainPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
         background = new javax.swing.JPanel();
         sidePanel = new RoundedPanel(15, new Color(70,131,166, 220));
         edusyncSidePanelTitle = new javax.swing.JLabel();
@@ -114,7 +119,45 @@ public class newMainPage extends javax.swing.JFrame {
         dashboardMainPanel = new RoundedPanel(15, new Color(70,131,166, 220));
         dashboardUsernameLabel = new javax.swing.JLabel();
         dashboardGreetingsLabel = new javax.swing.JLabel();
+        dashboardStudentCountPanel1 = new javax.swing.JPanel();
+        dashboardAttendanceLabel = new javax.swing.JLabel();
+        dashboardAttendancePercentage = new javax.swing.JLabel();
+        dashboardAttendanceIcon = new javax.swing.JLabel();
+        dashboardStudentCountPanel = new javax.swing.JPanel();
+        dashboardStudentCountNum = new javax.swing.JLabel();
+        dashboardStudentCountLabel = new javax.swing.JLabel();
+        dashboardStudentCountIcon = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        dashboardBestInAttendanceIcon1 = new javax.swing.JLabel();
+        dashboardBestInAttendanceSection = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        dashboardBestInMarksIcon = new javax.swing.JLabel();
+        dashboardBestInMarksSection = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        dashboardMostImprovedAttendanceIcon = new javax.swing.JLabel();
+        dashboardMostImprovedAttendanceSection = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        dashboardMostImprovedMarks = new javax.swing.JLabel();
+        dashboardMostImprovedSection = new javax.swing.JLabel();
+        dashboardBestInAttendanceLabel = new javax.swing.JLabel();
+        dashboardBestInMarksLabel = new javax.swing.JLabel();
+        dashboardMostImprovedMarksLabel = new javax.swing.JLabel();
+        dashboardMostImprovedAttendasnceLabel = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+
+        jLabel7.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
+        jLabel7.setText("ICT 12D");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync");
@@ -325,6 +368,198 @@ public class newMainPage extends javax.swing.JFrame {
         dashboardGreetingsLabel.setText("Good Day,");
         dashboardMainPanel.add(dashboardGreetingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
+        dashboardStudentCountPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        dashboardStudentCountPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        dashboardStudentCountPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardStudentCountPanel1.setOpaque(false);
+        dashboardStudentCountPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dashboardAttendanceLabel.setFont(new java.awt.Font("Open Sans", 0, 13)); // NOI18N
+        dashboardAttendanceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardAttendanceLabel.setText("Attendance");
+        dashboardStudentCountPanel1.add(dashboardAttendanceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
+
+        dashboardAttendancePercentage.setFont(new java.awt.Font("Lato Light", 0, 30)); // NOI18N
+        dashboardAttendancePercentage.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardAttendancePercentage.setText("87.55%");
+        dashboardStudentCountPanel1.add(dashboardAttendancePercentage, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 110, 40));
+
+        dashboardAttendanceIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/dashboardAttendance.png"))); // NOI18N
+        dashboardAttendanceIcon.setText("jLabel8");
+        dashboardStudentCountPanel1.add(dashboardAttendanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, -1));
+
+        dashboardMainPanel.add(dashboardStudentCountPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, 210, 80));
+
+        dashboardStudentCountPanel.setBackground(new java.awt.Color(255, 255, 255));
+        dashboardStudentCountPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        dashboardStudentCountPanel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardStudentCountPanel.setOpaque(false);
+        dashboardStudentCountPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dashboardStudentCountNum.setFont(new java.awt.Font("Lato Light", 0, 36)); // NOI18N
+        dashboardStudentCountNum.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardStudentCountNum.setText("5,000");
+        dashboardStudentCountPanel.add(dashboardStudentCountNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 40));
+
+        dashboardStudentCountLabel.setFont(new java.awt.Font("Open Sans", 2, 13)); // NOI18N
+        dashboardStudentCountLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardStudentCountLabel.setText("Student Count");
+        dashboardStudentCountPanel.add(dashboardStudentCountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 90, 20));
+
+        dashboardStudentCountIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/StudentCount.png"))); // NOI18N
+        dashboardStudentCountIcon.setText("jLabel6");
+        dashboardStudentCountPanel.add(dashboardStudentCountIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, -1));
+
+        dashboardMainPanel.add(dashboardStudentCountPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 210, 80));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 430, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
+        );
+
+        dashboardMainPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 430, 480));
+
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel5.setOpaque(false);
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("John Doe");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Lato Light", 0, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("87.5%");
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+
+        dashboardBestInAttendanceIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/boystudent.png"))); // NOI18N
+        dashboardBestInAttendanceIcon1.setText("jLabel13");
+        jPanel5.add(dashboardBestInAttendanceIcon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 60, -1));
+
+        dashboardBestInAttendanceSection.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
+        dashboardBestInAttendanceSection.setText("ICT 12D");
+        jPanel5.add(dashboardBestInAttendanceSection, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 160, 80));
+
+        jPanel6.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel6.setOpaque(false);
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Sarah Collins");
+        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+
+        jLabel18.setFont(new java.awt.Font("Lato Light", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("97.5%");
+        jPanel6.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+
+        dashboardBestInMarksIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/student.png"))); // NOI18N
+        dashboardBestInMarksIcon.setText("jLabel5");
+        jPanel6.add(dashboardBestInMarksIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 60, -1));
+
+        dashboardBestInMarksSection.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
+        dashboardBestInMarksSection.setText("ICT 12D");
+        jPanel6.add(dashboardBestInMarksSection, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 150, 80));
+
+        jPanel7.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel7.setOpaque(false);
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Chris Lee");
+        jPanel7.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 90, -1));
+
+        jLabel19.setFont(new java.awt.Font("Lato Light", 0, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("89.8%");
+        jPanel7.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+
+        dashboardMostImprovedAttendanceIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/boystudent.png"))); // NOI18N
+        dashboardMostImprovedAttendanceIcon.setText("jLabel13");
+        jPanel7.add(dashboardMostImprovedAttendanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 60, -1));
+
+        dashboardMostImprovedAttendanceSection.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
+        dashboardMostImprovedAttendanceSection.setText("ICT 12D");
+        jPanel7.add(dashboardMostImprovedAttendanceSection, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 160, 80));
+
+        jPanel8.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel8.setOpaque(false);
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Erina Smith");
+        jPanel8.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Lato Light", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("94.3%");
+        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+
+        dashboardMostImprovedMarks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/student.png"))); // NOI18N
+        dashboardMostImprovedMarks.setText("jLabel5");
+        jPanel8.add(dashboardMostImprovedMarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 60, -1));
+
+        dashboardMostImprovedSection.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
+        dashboardMostImprovedSection.setText("ICT 12D");
+        jPanel8.add(dashboardMostImprovedSection, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 150, 80));
+
+        dashboardBestInAttendanceLabel.setFont(new java.awt.Font("Open Sans", 0, 12)); // NOI18N
+        dashboardBestInAttendanceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardBestInAttendanceLabel.setText("Best in Attendance");
+        jPanel3.add(dashboardBestInAttendanceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+
+        dashboardBestInMarksLabel.setFont(new java.awt.Font("Open Sans", 0, 12)); // NOI18N
+        dashboardBestInMarksLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardBestInMarksLabel.setText("Best in Marks");
+        jPanel3.add(dashboardBestInMarksLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
+
+        dashboardMostImprovedMarksLabel.setFont(new java.awt.Font("Open Sans", 0, 11)); // NOI18N
+        dashboardMostImprovedMarksLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardMostImprovedMarksLabel.setText("Most Improved in Marks");
+        jPanel3.add(dashboardMostImprovedMarksLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 160, -1));
+
+        dashboardMostImprovedAttendasnceLabel.setFont(new java.awt.Font("Open Sans", 0, 11)); // NOI18N
+        dashboardMostImprovedAttendasnceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardMostImprovedAttendasnceLabel.setText("Most Improved in Attendance");
+        jPanel3.add(dashboardMostImprovedAttendasnceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 160, -1));
+
+        dashboardMainPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 340, 250));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 340, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 220, Short.MAX_VALUE)
+        );
+
+        dashboardMainPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 340, 220));
+
         dashboardBackgroundPanel.add(dashboardMainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 800, 630));
 
         mainPagePanels.addTab("tab2", dashboardBackgroundPanel);
@@ -346,6 +581,7 @@ public class newMainPage extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void sidePanelHomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidePanelHomeButtonMouseClicked
@@ -494,10 +730,30 @@ public class newMainPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel attendanceSelector;
     private javax.swing.JPanel background;
+    private javax.swing.JLabel dashboardAttendanceIcon;
+    private javax.swing.JLabel dashboardAttendanceLabel;
+    private javax.swing.JLabel dashboardAttendancePercentage;
     private javax.swing.JPanel dashboardBackgroundPanel;
+    private javax.swing.JLabel dashboardBestInAttendanceIcon1;
+    private javax.swing.JLabel dashboardBestInAttendanceLabel;
+    private javax.swing.JLabel dashboardBestInAttendanceSection;
+    private javax.swing.JLabel dashboardBestInMarksIcon;
+    private javax.swing.JLabel dashboardBestInMarksLabel;
+    private javax.swing.JLabel dashboardBestInMarksSection;
     private javax.swing.JLabel dashboardGreetingsLabel;
     private javax.swing.JPanel dashboardMainPanel;
+    private javax.swing.JLabel dashboardMostImprovedAttendanceIcon;
+    private javax.swing.JLabel dashboardMostImprovedAttendanceSection;
+    private javax.swing.JLabel dashboardMostImprovedAttendasnceLabel;
+    private javax.swing.JLabel dashboardMostImprovedMarks;
+    private javax.swing.JLabel dashboardMostImprovedMarksLabel;
+    private javax.swing.JLabel dashboardMostImprovedSection;
     private javax.swing.JLabel dashboardSelector;
+    private javax.swing.JLabel dashboardStudentCountIcon;
+    private javax.swing.JLabel dashboardStudentCountLabel;
+    private javax.swing.JLabel dashboardStudentCountNum;
+    private javax.swing.JPanel dashboardStudentCountPanel;
+    private javax.swing.JPanel dashboardStudentCountPanel1;
     public javax.swing.JLabel dashboardUsernameLabel;
     private javax.swing.JLabel edusyncSidePanelTitle;
     private javax.swing.JPanel homeBackgroundPanel;
@@ -508,9 +764,25 @@ public class newMainPage extends javax.swing.JFrame {
     private javax.swing.JPanel homeSearchPanel;
     private javax.swing.JLabel homeSelector;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JLabel mainPageDesc1;
     private javax.swing.JLabel mainPageDesc2;
     private javax.swing.JLabel mainPageDesc3;

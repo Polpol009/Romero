@@ -86,6 +86,8 @@ public class Mainpage extends javax.swing.JFrame {
         tabbedPaneClasslistIndex = new javax.swing.JPanel();
         tabbedPaneSectionsIndex = new javax.swing.JPanel();
         tabbedPaneAttendanceIndex = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync");
@@ -318,6 +320,23 @@ public class Mainpage extends javax.swing.JFrame {
 
         mainPageAttendance.addTab("Attendance", tabbedPaneAttendanceIndex);
 
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 905, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 561, Short.MAX_VALUE)
+        );
+
+        jScrollPane1.setViewportView(jPanel1);
+
+        mainPageAttendance.addTab("tab6", jScrollPane1);
+
         backgroundPanel.add(mainPageAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 910, 590));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -467,6 +486,8 @@ public class Mainpage extends javax.swing.JFrame {
     private javax.swing.JPanel homeworksSidePanelButton;
     private javax.swing.JLabel homeworksSidePanelLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane mainPageAttendance;
     private javax.swing.JLabel mainPageCCSTLogo;

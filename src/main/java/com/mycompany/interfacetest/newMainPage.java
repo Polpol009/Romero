@@ -328,7 +328,7 @@ public class newMainPage extends javax.swing.JFrame {
 
         mainPageDesc1.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
         mainPageDesc1.setForeground(new java.awt.Color(255, 255, 255));
-        mainPageDesc1.setText("Empowering educational institutions with efficiency and simplicity. our Student ");
+        mainPageDesc1.setText("Empowering educational institutions with efficiency and simplicity. Our Student ");
         homeMainPanel.add(mainPageDesc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, -1, 20));
 
         mainPageDesc2.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N

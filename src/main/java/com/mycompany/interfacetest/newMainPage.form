@@ -126,7 +126,7 @@
                 <Component class="javax.swing.JLabel" name="miniAttendanceIcon">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/mainPageIcons/attendance2.png"/>
+                      <Image iconType="3" name="/mainPageIcons/unselectedAttendance.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jLabel6"/>
                   </Properties>
@@ -196,7 +196,7 @@
                 <Component class="javax.swing.JLabel" name="miniHomeIcon">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/mainPageIcons/home2.png"/>
+                      <Image iconType="3" name="/mainPageIcons/unselectedHome.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jLabel3"/>
                   </Properties>
@@ -259,7 +259,7 @@
                 <Component class="javax.swing.JLabel" name="miniDashboardIcon">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/mainPageIcons/laptop2.png"/>
+                      <Image iconType="3" name="/mainPageIcons/unselectedDashboard.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jLabel4"/>
                   </Properties>
@@ -322,7 +322,7 @@
                 <Component class="javax.swing.JLabel" name="miniStudentIcon">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/mainPageIcons/student2.png"/>
+                      <Image iconType="3" name="/mainPageIcons/unselectedStudent.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jLabel2"/>
                   </Properties>
@@ -385,7 +385,7 @@
                 <Component class="javax.swing.JLabel" name="miniSectionsIcon">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/mainPageIcons/sections2.png"/>
+                      <Image iconType="3" name="/mainPageIcons/unselectedSections.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jLabel5"/>
                   </Properties>

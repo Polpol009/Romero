@@ -188,7 +188,7 @@ public class newMainPage extends javax.swing.JFrame {
         sidePanelAttendanceText.setText("Attendance");
         sidePanelAttendanceButton.add(sidePanelAttendanceText, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        miniAttendanceIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/attendance2.png"))); // NOI18N
+        miniAttendanceIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/unselectedAttendance.png"))); // NOI18N
         miniAttendanceIcon.setText("jLabel6");
         sidePanelAttendanceButton.add(miniAttendanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 
@@ -213,7 +213,7 @@ public class newMainPage extends javax.swing.JFrame {
         sidePanelHomeText.setText("Home");
         sidePanelHomeButton.add(sidePanelHomeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, 30));
 
-        miniHomeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/home2.png"))); // NOI18N
+        miniHomeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/unselectedHome.png"))); // NOI18N
         miniHomeIcon.setText("jLabel3");
         sidePanelHomeButton.add(miniHomeIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 
@@ -236,7 +236,7 @@ public class newMainPage extends javax.swing.JFrame {
         sidePanelDashText1.setText("Dashboard");
         sidePanelDashButton1.add(sidePanelDashText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        miniDashboardIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/laptop2.png"))); // NOI18N
+        miniDashboardIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/unselectedDashboard.png"))); // NOI18N
         miniDashboardIcon.setText("jLabel4");
         sidePanelDashButton1.add(miniDashboardIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 
@@ -259,7 +259,7 @@ public class newMainPage extends javax.swing.JFrame {
         sidePanelStudentText1.setText("Students");
         sidePanelStudentButton1.add(sidePanelStudentText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        miniStudentIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/student2.png"))); // NOI18N
+        miniStudentIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/unselectedStudent.png"))); // NOI18N
         miniStudentIcon.setText("jLabel2");
         sidePanelStudentButton1.add(miniStudentIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 
@@ -282,7 +282,7 @@ public class newMainPage extends javax.swing.JFrame {
         sidePanelSectionsText1.setText("Sections");
         sidePanelSectionsButton1.add(sidePanelSectionsText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        miniSectionsIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/sections2.png"))); // NOI18N
+        miniSectionsIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/unselectedSections.png"))); // NOI18N
         miniSectionsIcon.setText("jLabel5");
         sidePanelSectionsButton1.add(miniSectionsIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 

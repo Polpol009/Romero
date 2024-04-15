@@ -9,7 +9,9 @@ package com.mycompany.interfacetest;
  * @author avery
  */
 import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.Toolkit;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -23,6 +25,30 @@ public class newLoginPage extends javax.swing.JFrame {
     public newLoginPage() {
         initComponents();
         setIconImage();
+                try {
+            // Import fonts
+            File importTitleFont = new File("src/main/resources/Fonts/Anton-Regular.ttf");
+            File importBodyFont = new File("src/main/resources/Fonts/MajorMonoDisplay-Regular.ttf");
+            File importAccentFont = new File("src/main/resources/Fonts/OpenSans-Regular.ttf");
+            File importEduSyncTitleFont = new File("src/main/resources/Fonts/HankenGrotesk-Bold.ttf");
+            File importLoginTItleFont = new File("src/main/resources/Fonts/Inter-bold.ttf");
+            File importBodyTextFont = new File("src/main/resources/Fonts/Inter-Regular.ttf");
+            
+            // Assign fonts to variables, set font size
+            Font titleFont = Font.createFont(Font.TRUETYPE_FONT, importTitleFont).deriveFont(60f);
+            Font bodyFont = Font.createFont(Font.TRUETYPE_FONT, importBodyFont).deriveFont(18f);
+            Font accentFont = Font.createFont(Font.TRUETYPE_FONT, importAccentFont).deriveFont(14f);
+            
+            
+            // Set font for UI **BELOW**
+            edusyncTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importEduSyncTitleFont).deriveFont(14f));
+            loginTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importLoginTItleFont).deriveFont(48f));
+            dontHaveAccountTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyTextFont).deriveFont(12f));
+            signupHyperlink.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyTextFont).deriveFont(12f));
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -51,7 +77,6 @@ public class newLoginPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync - Login");
-        setPreferredSize(new java.awt.Dimension(1000, 570));
 
         backgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -77,7 +102,7 @@ public class newLoginPage extends javax.swing.JFrame {
         userIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginIcons/MaleUser.png"))); // NOI18N
 
         loginUsernameField.setBackground(new java.awt.Color(159, 198, 216));
-        loginUsernameField.setForeground(new java.awt.Color(31, 58, 104));
+        loginUsernameField.setForeground(new java.awt.Color(21, 102, 168));
         loginUsernameField.setLabelText("Username");
 
         javax.swing.GroupLayout usernamePanelLayout = new javax.swing.GroupLayout(usernamePanel);
@@ -109,7 +134,7 @@ public class newLoginPage extends javax.swing.JFrame {
         lockIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginIcons/newLock.png"))); // NOI18N
 
         loginPasswordField.setBackground(new java.awt.Color(159, 198, 216));
-        loginPasswordField.setForeground(new java.awt.Color(31, 58, 104));
+        loginPasswordField.setForeground(new java.awt.Color(21, 102, 168));
         loginPasswordField.setLabelText("Password");
         loginPasswordField.setShowAndHide(true);
 
@@ -148,6 +173,7 @@ public class newLoginPage extends javax.swing.JFrame {
         dontHaveAccountTitle.setForeground(new java.awt.Color(21, 102, 168));
         dontHaveAccountTitle.setText("Don't have an account?");
 
+        signupHyperlink.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
         signupHyperlink.setForeground(new java.awt.Color(21, 102, 168));
         signupHyperlink.setText("<html>\n<u>Sign up here</u>\n</html>");
         signupHyperlink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

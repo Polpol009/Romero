@@ -71,7 +71,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                                      <Component id="dontHaveAccountTitle" min="-2" max="-2" attributes="0"/>
+                                      <Component id="dontHaveAccountLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="signupHyperlink" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -111,7 +111,7 @@
                   <Component id="loginConfirmButton" min="-2" pref="57" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="dontHaveAccountTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dontHaveAccountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="signupHyperlink" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -290,7 +290,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginConfirmButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="dontHaveAccountTitle">
+        <Component class="javax.swing.JLabel" name="dontHaveAccountLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Inter" size="12" style="0"/>

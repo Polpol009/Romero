@@ -9,7 +9,9 @@ package com.mycompany.interfacetest;
  * @author avery
  */
 import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.Toolkit;
+import java.io.File;
 public class newSignupPage extends javax.swing.JFrame {
 
     /**
@@ -18,6 +20,23 @@ public class newSignupPage extends javax.swing.JFrame {
     public newSignupPage() {
         initComponents();
         setIconImage();
+                        try {
+            // Import fonts
+            File importAccentFont = new File("src/main/resources/Fonts/Inter-bold.ttf");
+            File importHeadingFont = new File("src/main/resources/Fonts/Inter-Regular.ttf");
+            File importBodyFont = new File("src/main/resources/Fonts/Inter-Regular.ttf");
+            
+            // Assign fonts to variables, set font size
+            // * Goes here
+            
+            // Set font for UI **BELOW**
+            signupTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importHeadingFont).deriveFont(48f));
+            alreadyHaveAccountLabel.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyFont).deriveFont(12f));
+            loginHyperlink.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyFont).deriveFont(12f));
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -31,7 +50,7 @@ public class newSignupPage extends javax.swing.JFrame {
 
         backgroundPanel = new javax.swing.JPanel();
         sidepanelArt = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        signupTitle = new javax.swing.JLabel();
         roundedPanel1 = new CustomizedElements.RoundedPanel();
         jLabel4 = new javax.swing.JLabel();
         loginCustomTextfield1 = new CustomizedElements.LoginCustomTextfield();
@@ -49,7 +68,7 @@ public class newSignupPage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         loginCustomPasswordfield2 = new CustomizedElements.LoginCustomPasswordfield();
         customizedButton2 = new CustomizedElements.CustomizedButton();
-        jLabel2 = new javax.swing.JLabel();
+        alreadyHaveAccountLabel = new javax.swing.JLabel();
         loginHyperlink = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -63,9 +82,9 @@ public class newSignupPage extends javax.swing.JFrame {
 
         sidepanelArt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signupIcons/signupArtPanel.png"))); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Inter", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(31, 58, 104));
-        jLabel1.setText("Sign Up");
+        signupTitle.setFont(new java.awt.Font("Inter", 1, 48)); // NOI18N
+        signupTitle.setForeground(new java.awt.Color(31, 58, 104));
+        signupTitle.setText("Sign Up");
 
         roundedPanel1.setBackground(new java.awt.Color(159, 198, 216));
         roundedPanel1.setPreferredSize(new java.awt.Dimension(290, 60));
@@ -243,8 +262,8 @@ public class newSignupPage extends javax.swing.JFrame {
         customizedButton2.setText("Confirm");
         customizedButton2.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
 
-        jLabel2.setForeground(new java.awt.Color(21, 102, 168));
-        jLabel2.setText("Already have an account?");
+        alreadyHaveAccountLabel.setForeground(new java.awt.Color(21, 102, 168));
+        alreadyHaveAccountLabel.setText("Already have an account?");
 
         loginHyperlink.setForeground(new java.awt.Color(21, 102, 168));
         loginHyperlink.setText("<html>\n<u>Login here</u>\n</html>");
@@ -264,7 +283,7 @@ public class newSignupPage extends javax.swing.JFrame {
                         .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPanelLayout.createSequentialGroup()
-                                    .addComponent(jLabel1)
+                                    .addComponent(signupTitle)
                                     .addGap(50, 50, 50))
                                 .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(backgroundPanelLayout.createSequentialGroup()
@@ -283,7 +302,7 @@ public class newSignupPage extends javax.swing.JFrame {
                         .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(backgroundPanelLayout.createSequentialGroup()
                                 .addGap(153, 153, 153)
-                                .addComponent(jLabel2)
+                                .addComponent(alreadyHaveAccountLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(loginHyperlink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(backgroundPanelLayout.createSequentialGroup()
@@ -304,7 +323,7 @@ public class newSignupPage extends javax.swing.JFrame {
                     .addGroup(backgroundPanelLayout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1))
+                        .addComponent(signupTitle))
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
                 .addComponent(roundedPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -322,7 +341,7 @@ public class newSignupPage extends javax.swing.JFrame {
                 .addComponent(customizedButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(alreadyHaveAccountLabel)
                     .addComponent(loginHyperlink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -382,11 +401,10 @@ public class newSignupPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel alreadyHaveAccountLabel;
     private javax.swing.JPanel backgroundPanel;
     private CustomizedElements.CustomizedButton customizedButton1;
     private CustomizedElements.CustomizedButton customizedButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -406,6 +424,7 @@ public class newSignupPage extends javax.swing.JFrame {
     private CustomizedElements.RoundedPanel roundedPanel5;
     private CustomizedElements.RoundedPanel roundedPanel6;
     private javax.swing.JLabel sidepanelArt;
+    private javax.swing.JLabel signupTitle;
     // End of variables declaration//GEN-END:variables
 
     private void setIconImage() {

@@ -43,7 +43,7 @@ public class newLoginPage extends javax.swing.JFrame {
             // Set font for UI **BELOW**
             edusyncTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importEduSyncTitleFont).deriveFont(14f));
             loginTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importLoginTItleFont).deriveFont(48f));
-            dontHaveAccountTitle.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyTextFont).deriveFont(12f));
+            dontHaveAccountLabel.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyTextFont).deriveFont(12f));
             signupHyperlink.setFont(Font.createFont(Font.TRUETYPE_FONT, importBodyTextFont).deriveFont(12f));
             
         } catch (Exception e) {
@@ -72,7 +72,7 @@ public class newLoginPage extends javax.swing.JFrame {
         lockIcon = new javax.swing.JLabel();
         loginPasswordField = new CustomizedElements.LoginCustomPasswordfield();
         loginConfirmButton = new CustomizedElements.CustomizedButton();
-        dontHaveAccountTitle = new javax.swing.JLabel();
+        dontHaveAccountLabel = new javax.swing.JLabel();
         signupHyperlink = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -169,9 +169,9 @@ public class newLoginPage extends javax.swing.JFrame {
             }
         });
 
-        dontHaveAccountTitle.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
-        dontHaveAccountTitle.setForeground(new java.awt.Color(21, 102, 168));
-        dontHaveAccountTitle.setText("Don't have an account?");
+        dontHaveAccountLabel.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        dontHaveAccountLabel.setForeground(new java.awt.Color(21, 102, 168));
+        dontHaveAccountLabel.setText("Don't have an account?");
 
         signupHyperlink.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
         signupHyperlink.setForeground(new java.awt.Color(21, 102, 168));
@@ -210,7 +210,7 @@ public class newLoginPage extends javax.swing.JFrame {
                                     .addComponent(loginConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(backgroundPanelLayout.createSequentialGroup()
                                     .addGap(138, 138, 138)
-                                    .addComponent(dontHaveAccountTitle)
+                                    .addComponent(dontHaveAccountLabel)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(signupHyperlink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)))
@@ -239,7 +239,7 @@ public class newLoginPage extends javax.swing.JFrame {
                 .addComponent(loginConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dontHaveAccountTitle)
+                    .addComponent(dontHaveAccountLabel)
                     .addComponent(signupHyperlink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -330,7 +330,7 @@ public class newLoginPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private CustomizedElements.RoundedPanel PasswordPanel;
     private javax.swing.JPanel backgroundPanel;
-    private javax.swing.JLabel dontHaveAccountTitle;
+    private javax.swing.JLabel dontHaveAccountLabel;
     private javax.swing.JLabel edusyncLogo;
     private javax.swing.JLabel edusyncTitle;
     private javax.swing.JLabel lockIcon;

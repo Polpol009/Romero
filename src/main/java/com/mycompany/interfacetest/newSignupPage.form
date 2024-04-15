@@ -489,6 +489,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;u&gt;Login here&lt;/u&gt;&#xa;&lt;/html&gt;"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginHyperlinkMouseClicked"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="loginHyperlink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));"/>
           </AuxValues>

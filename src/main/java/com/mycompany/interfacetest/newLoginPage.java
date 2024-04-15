@@ -288,7 +288,7 @@ public class newLoginPage extends javax.swing.JFrame {
     private void signupHyperlinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupHyperlinkMouseClicked
         // TODO add your handling code here:
         this.dispose();
-        SignUp signupPage = new SignUp();
+        newSignupPage signupPage = new newSignupPage();
         signupPage.setVisible(true);
     }//GEN-LAST:event_signupHyperlinkMouseClicked
 

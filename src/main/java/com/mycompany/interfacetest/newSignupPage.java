@@ -268,6 +268,11 @@ public class newSignupPage extends javax.swing.JFrame {
         loginHyperlink.setForeground(new java.awt.Color(21, 102, 168));
         loginHyperlink.setText("<html>\n<u>Login here</u>\n</html>");
         loginHyperlink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        loginHyperlink.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginHyperlinkMouseClicked(evt);
+            }
+        });
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginIcons/EduSync-Logo.png"))); // NOI18N
 
@@ -364,6 +369,13 @@ public class newSignupPage extends javax.swing.JFrame {
     private void customizedButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customizedButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_customizedButton1ActionPerformed
+
+    private void loginHyperlinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginHyperlinkMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        newLoginPage newLogin = new newLoginPage();
+        newLogin.show();
+    }//GEN-LAST:event_loginHyperlinkMouseClicked
 
     /**
      * @param args the command line arguments

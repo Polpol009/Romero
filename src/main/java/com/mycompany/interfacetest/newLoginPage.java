@@ -22,8 +22,14 @@ public class newLoginPage extends javax.swing.JFrame {
     /**
      * Creates new form newLoginPage
      */
+        Connection conn;
+        PreparedStatement pst;
+        ResultSet rs;
     public newLoginPage() {
         initComponents();
+       
+        conn = InterfaceTest.conn();
+        
         setIconImage();
                 try {
             // Import fonts
@@ -264,25 +270,44 @@ public class newLoginPage extends javax.swing.JFrame {
         String loginPassword = loginPasswordField.getText();
         
         try {
-            Class.forName("org.postgresql.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/UserLogin", "Admin", "user123");
-            String sqlquery = "SELECT * FROM login.login_credentials WHERE username='"+loginUsername+"' AND userpassword='"+loginPassword+"'"; 
-            PreparedStatement pst = conn.prepareStatement(sqlquery);
-            ResultSet rs = pst.executeQuery();
+            String sqlquery = "SELECT * FROM UserLogin WHERE UserName = ? and UserPassword = ?";
+            pst = conn.prepareStatement(sqlquery);
+            pst.setString(1, loginUsername);
+            pst.setString(2, loginPassword);
+            rs = pst.executeQuery();
             
-            if(!rs.next()){
-                JOptionPane.showMessageDialog(null, "Invalid username or password.");
+            if(!rs.next()) {
+                JOptionPane.showMessageDialog(null, "Invalid Username or Password");
             }else {
-                JOptionPane.showMessageDialog(null, "Login successful.");
-                this.dispose();
-                newMainPage mainpage = new newMainPage();
-                mainpage.dashboardUsernameLabel.setText("Hello " + loginUsername);
-                mainpage.show();
+                JOptionPane.showMessageDialog(null, "Login Successful");
+                newMainPage mainPage = new newMainPage();
+                mainPage.dashboardUsernameLabel.setText("Hello " + loginUsername);
+                mainPage.show();
             }
-            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+        
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/UserLogin", "Admin", "user123");
+//            String sqlquery = "SELECT * FROM login.login_credentials WHERE username='"+loginUsername+"' AND userpassword='"+loginPassword+"'"; 
+//            PreparedStatement pst = conn.prepareStatement(sqlquery);
+//            ResultSet rs = pst.executeQuery();
+//            
+//            if(!rs.next()){
+//                JOptionPane.showMessageDialog(null, "Invalid username or password.");
+//            }else {
+//                JOptionPane.showMessageDialog(null, "Login successful.");
+//                this.dispose();
+//                newMainPage mainpage = new newMainPage();
+//                mainpage.dashboardUsernameLabel.setText("Hello " + loginUsername);
+//                mainpage.show();
+//            }
+//            
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e);
+//        }
     }//GEN-LAST:event_loginConfirmButtonActionPerformed
 
     private void signupHyperlinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupHyperlinkMouseClicked

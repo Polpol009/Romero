@@ -61,38 +61,32 @@
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="roundedPanel3" min="-2" pref="194" max="-2" attributes="0"/>
+                                          <Component id="usernamePanel" min="-2" pref="194" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="customizedButton1" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="checknameButton" min="-2" pref="90" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="roundedPanel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="roundedPanel6" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="passwordPanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="confirmpasswordPanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="alreadyHaveAccountLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="loginHyperlink" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="roundedPanel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="roundedPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lastnamePanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="firstnamePanel" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="customizedButton2" min="-2" pref="145" max="-2" attributes="0"/>
+                                  <Component id="confirmSignupButton" min="-2" pref="145" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
-                                  <Component id="alreadyHaveAccountLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="loginHyperlink" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -109,31 +103,30 @@
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Component id="signupTitle" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="roundedPanel1" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="firstnamePanel" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="roundedPanel2" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="lastnamePanel" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="roundedPanel3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="customizedButton1" min="-2" pref="56" max="-2" attributes="0"/>
+                      <Component id="usernamePanel" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="checknameButton" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="roundedPanel5" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="passwordPanel" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="roundedPanel6" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="confirmpasswordPanel" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Component id="customizedButton2" min="-2" pref="63" max="-2" attributes="0"/>
+                  <Component id="confirmSignupButton" min="-2" pref="63" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="alreadyHaveAccountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="loginHyperlink" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="alreadyHaveAccountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -159,7 +152,7 @@
             <Property name="text" type="java.lang.String" value="Sign Up"/>
           </Properties>
         </Component>
-        <Container class="CustomizedElements.RoundedPanel" name="roundedPanel1">
+        <Container class="CustomizedElements.RoundedPanel" name="firstnamePanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -180,7 +173,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="loginCustomTextfield1" min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="firstnameField" min="-2" pref="209" max="-2" attributes="0"/>
                       <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -189,7 +182,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel4" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="loginCustomTextfield1" min="-2" max="-2" attributes="0"/>
+                      <Component id="firstnameField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -203,7 +196,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="CustomizedElements.LoginCustomTextfield" name="loginCustomTextfield1">
+            <Component class="CustomizedElements.LoginCustomTextfield" name="firstnameField">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -216,7 +209,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="CustomizedElements.RoundedPanel" name="roundedPanel2">
+        <Container class="CustomizedElements.RoundedPanel" name="lastnamePanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -237,7 +230,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="loginCustomTextfield2" min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="lastnameField" min="-2" pref="209" max="-2" attributes="0"/>
                       <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -246,7 +239,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel6" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="loginCustomTextfield2" min="-2" max="-2" attributes="0"/>
+                      <Component id="lastnameField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -260,7 +253,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="CustomizedElements.LoginCustomTextfield" name="loginCustomTextfield2">
+            <Component class="CustomizedElements.LoginCustomTextfield" name="lastnameField">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -273,7 +266,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="CustomizedElements.RoundedPanel" name="roundedPanel3">
+        <Container class="CustomizedElements.RoundedPanel" name="usernamePanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -294,7 +287,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="loginCustomTextfield3" min="-2" pref="109" max="-2" attributes="0"/>
+                      <Component id="usernameField" min="-2" pref="109" max="-2" attributes="0"/>
                       <EmptySpace pref="33" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -303,7 +296,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel7" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="loginCustomTextfield3" min="-2" max="-2" attributes="0"/>
+                      <Component id="usernameField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -317,7 +310,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="CustomizedElements.LoginCustomTextfield" name="loginCustomTextfield3">
+            <Component class="CustomizedElements.LoginCustomTextfield" name="usernameField">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -330,7 +323,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="CustomizedElements.CustomizedButton" name="customizedButton1">
+        <Component class="CustomizedElements.CustomizedButton" name="checknameButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="b7" green="c9" red="6d" type="rgb"/>
@@ -341,10 +334,10 @@
             <Property name="text" type="java.lang.String" value="Check"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customizedButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checknameButtonActionPerformed"/>
           </Events>
         </Component>
-        <Container class="CustomizedElements.RoundedPanel" name="roundedPanel5">
+        <Container class="CustomizedElements.RoundedPanel" name="passwordPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -365,7 +358,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="loginCustomPasswordfield1" min="-2" pref="202" max="-2" attributes="0"/>
+                      <Component id="passwordField" min="-2" pref="202" max="-2" attributes="0"/>
                       <EmptySpace pref="36" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -374,7 +367,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel3" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="loginCustomPasswordfield1" min="-2" max="-2" attributes="0"/>
+                      <Component id="passwordField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -388,7 +381,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="CustomizedElements.LoginCustomPasswordfield" name="loginCustomPasswordfield1">
+            <Component class="CustomizedElements.LoginCustomPasswordfield" name="passwordField">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -402,7 +395,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="CustomizedElements.RoundedPanel" name="roundedPanel6">
+        <Container class="CustomizedElements.RoundedPanel" name="confirmpasswordPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -423,7 +416,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="loginCustomPasswordfield2" min="-2" pref="202" max="-2" attributes="0"/>
+                      <Component id="confirmPasswordField" min="-2" pref="202" max="-2" attributes="0"/>
                       <EmptySpace pref="36" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -432,7 +425,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel5" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="loginCustomPasswordfield2" min="-2" max="-2" attributes="0"/>
+                      <Component id="confirmPasswordField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -446,7 +439,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="CustomizedElements.LoginCustomPasswordfield" name="loginCustomPasswordfield2">
+            <Component class="CustomizedElements.LoginCustomPasswordfield" name="confirmPasswordField">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d8" green="c6" red="9f" type="rgb"/>
@@ -460,7 +453,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="CustomizedElements.CustomizedButton" name="customizedButton2">
+        <Component class="CustomizedElements.CustomizedButton" name="confirmSignupButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="b7" green="c9" red="6d" type="rgb"/>
@@ -473,9 +466,15 @@
               <Font name="Inter" size="18" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmSignupButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="alreadyHaveAccountLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="12" style="0"/>
+            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a8" green="66" red="15" type="rgb"/>
             </Property>
@@ -484,6 +483,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="loginHyperlink">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="12" style="0"/>
+            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a8" green="66" red="15" type="rgb"/>
             </Property>
@@ -495,8 +497,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="loginHyperlink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));"/>
           </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>

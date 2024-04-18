@@ -377,6 +377,21 @@ public class newSignupPage extends javax.swing.JFrame {
 
     private void checknameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checknameButtonActionPerformed
         // TODO add your handling code here:
+        String usernameCheck = usernameField.getText();
+        
+        try {
+            String sqlquery =  "SELECT * FROM UserLogin WHERE Username='"+usernameCheck+"'";
+            pst = conn.prepareStatement(sqlquery);
+            rs = pst.executeQuery();
+            
+            if(rs.next()) {
+                JOptionPane.showMessageDialog(null, "Username already exists", "Check Username", JOptionPane.WARNING_MESSAGE);
+            }else {
+                JOptionPane.showMessageDialog(null, "Username Available!", "Check Username", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_checknameButtonActionPerformed
 
     private void loginHyperlinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginHyperlinkMouseClicked

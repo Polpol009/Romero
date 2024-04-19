@@ -31,7 +31,7 @@ public class newSignupPage extends javax.swing.JFrame {
                         try {
             // Import fonts
             File importAccentFont = new File("src/main/resources/Fonts/Inter-bold.ttf");
-            File importHeadingFont = new File("src/main/resources/Fonts/Inter-Regular.ttf");
+            File importHeadingFont = new File("src/main/resources/Fonts/Inter-Bold.ttf");
             File importBodyFont = new File("src/main/resources/Fonts/Inter-Regular.ttf");
             
             // Assign fonts to variables, set font size
@@ -411,19 +411,36 @@ public class newSignupPage extends javax.swing.JFrame {
         
         if (signupFirstname.isEmpty()||signupLastname.isEmpty()||signupUsername.isEmpty()||signupPassword.isEmpty()||signupConfirmPassword.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Empty fields detected. Please fill out all the fields", "Empty Fields", JOptionPane.WARNING_MESSAGE);
-        } else if (signupPassword.equals(signupConfirmPassword)) {
+        }else if (signupPassword.equals(signupConfirmPassword)) {
             try {
-            String sqlquery = "INSERT INTO UserLogin (FirstName, LastName, Username, UserPassword) VALUES ('"+signupFirstname+"','"+signupLastname+"','"+signupUsername+"','"+signupConfirmPassword+"')";
-            pst = conn.prepareStatement(sqlquery);
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "Registration Successful");
-            newLoginPage loginPage = new newLoginPage();
-            loginPage.show();
-            this.dispose();
+                String checkQuery = "SELECT * FROM UserLogin WHERE FirstName = '"+signupFirstname+"' AND LastName = '"+signupLastname+"'";
+                pst = conn.prepareStatement(checkQuery);
+                ResultSet rs = pst.executeQuery();
+                if(rs.next()){
+                    JOptionPane.showMessageDialog(null, "A user with the same first and last name already exists.", "Duplicate Name", JOptionPane.WARNING_MESSAGE);
+                }else{
+                    try {
+                        String usernameConfirmationQuery =  "SELECT * FROM UserLogin WHERE Username='"+signupUsername+"'";
+                        pst = conn.prepareStatement(usernameConfirmationQuery);
+                        ResultSet usernameConfirmationResultSet = pst.executeQuery();
+                        if(usernameConfirmationResultSet.next()) {
+                            JOptionPane.showMessageDialog(null, "Username already exists", "Check Username", JOptionPane.WARNING_MESSAGE);
+                        }else{
+                            String sqlquery = "INSERT INTO UserLogin (FirstName, LastName, Username, UserPassword) VALUES ('"+signupFirstname+"','"+signupLastname+"','"+signupUsername+"','"+signupConfirmPassword+"')";
+                            pst = conn.prepareStatement(sqlquery);
+                            pst.execute();
+                            JOptionPane.showMessageDialog(null, "Registration Successful");
+                            newLoginPage loginPage = new newLoginPage();
+                            loginPage.show();
+                            this.dispose();
+                        }
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
             }
-
         }else {
             System.out.println(signupPassword);
             System.out.println(signupConfirmPassword);

@@ -383,8 +383,9 @@ public class newSignupPage extends javax.swing.JFrame {
             String sqlquery =  "SELECT * FROM UserLogin WHERE Username='"+usernameCheck+"'";
             pst = conn.prepareStatement(sqlquery);
             rs = pst.executeQuery();
-            
-            if(rs.next()) {
+            if(usernameCheck.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Empty username. Please enter a valid username", "Check Username", JOptionPane.WARNING_MESSAGE);
+            }else if(rs.next()) {
                 JOptionPane.showMessageDialog(null, "Username already exists", "Check Username", JOptionPane.WARNING_MESSAGE);
             }else {
                 JOptionPane.showMessageDialog(null, "Username Available!", "Check Username", JOptionPane.INFORMATION_MESSAGE);

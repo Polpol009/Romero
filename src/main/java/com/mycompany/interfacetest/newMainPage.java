@@ -4,6 +4,7 @@
  */
 package com.mycompany.interfacetest;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,8 +14,13 @@ import java.awt.Graphics2D;
 import java.awt.LayoutManager;
 import java.awt.RenderingHints;
 import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -40,6 +46,12 @@ public class newMainPage extends javax.swing.JFrame {
      */
     public newMainPage() {
         initComponents();
+            try {
+                UIManager.setLookAndFeel(new FlatLightLaf());
+                SwingUtilities.updateComponentTreeUI(this);
+            } catch (UnsupportedLookAndFeelException ex) {
+                Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
+            }
         try {
             File importTitleFont = new File("src/main/resources/Fonts/Anton-Regular.ttf");
             File importBodyFont = new File("src/main/resources/Fonts/MajorMonoDisplay-Regular.ttf");

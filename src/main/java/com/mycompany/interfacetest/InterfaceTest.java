@@ -7,14 +7,10 @@ package com.mycompany.interfacetest;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- *
- * @author avery
- */
+
 public class InterfaceTest {
-    
+
     public static Connection conn() {
-        
         try {
             String url = "jdbc:ucanaccess://C://database//EduSync11.accdb";
             Connection conn = DriverManager.getConnection(url);

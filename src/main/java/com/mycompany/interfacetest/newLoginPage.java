@@ -280,8 +280,8 @@ public class newLoginPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Invalid Username or Password");
             }else {
                 JOptionPane.showMessageDialog(null, "Login Successful");
-                newMainPage mainPage = new newMainPage();
-                mainPage.dashboardUsernameLabel.setText("Hello " + loginUsername);
+                newerMainPage mainPage = new newerMainPage();
+//                mainPage.dashboardUsernameLabel.setText("Hello " + loginUsername);
                 mainPage.show();
             }
         } catch (Exception e) {

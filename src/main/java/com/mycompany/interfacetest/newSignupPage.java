@@ -27,7 +27,7 @@ public class newSignupPage extends javax.swing.JFrame {
     public newSignupPage() {
         initComponents();
         setIconImage();
-        conn = InterfaceTest.conn();
+        conn = InterfaceTest.loginConn();
                         try {
             // Import fonts
             File importAccentFont = new File("src/main/resources/Fonts/Inter-bold.ttf");

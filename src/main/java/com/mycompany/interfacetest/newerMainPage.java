@@ -10,16 +10,30 @@ import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import java.awt.CardLayout;
 import java.awt.Font;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import javax.swing.table.DefaultTableModel;
 
 public class newerMainPage extends javax.swing.JFrame {
-
+    Connection studentConn;
+    PreparedStatement pst;
+    Statement st;
+    ResultSet rs;
+    
     CardLayout mainpageCardLayout;
+    
     public newerMainPage() {
         FlatRobotoFont.install();
         FlatLaf.registerCustomDefaultsSource("avery.themes");
         UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 14));
         FlatMacLightLaf.setup();
+        
+        studentConn = InterfaceTest.studentConn();
+        
         initComponents();
         mainpageCardLayout = (CardLayout)(cardPanel.getLayout());
     }
@@ -39,7 +53,8 @@ public class newerMainPage extends javax.swing.JFrame {
         dashboardPanel = new javax.swing.JPanel();
         studentsPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        studentsTable = new javax.swing.JTable();
+        fetchStudentsDataButton = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -98,35 +113,45 @@ public class newerMainPage extends javax.swing.JFrame {
 
         cardPanel.add(dashboardPanel, "dashboardCard");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        studentsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "First Name", "Last Name", "Student Number", "Grade Level", "Strand"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
-        jTable1.getAccessibleContext().setAccessibleName("");
+        jScrollPane2.setViewportView(studentsTable);
+        studentsTable.getAccessibleContext().setAccessibleName("");
+
+        fetchStudentsDataButton.setText("Fetch Data");
+        fetchStudentsDataButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fetchStudentsDataButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout studentsPanelLayout = new javax.swing.GroupLayout(studentsPanel);
         studentsPanel.setLayout(studentsPanelLayout);
         studentsPanelLayout.setHorizontalGroup(
             studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createSequentialGroup()
-                .addContainerGap(429, Short.MAX_VALUE)
+                .addGap(157, 157, 157)
+                .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(14, 14, 14))
         );
         studentsPanelLayout.setVerticalGroup(
             studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+            .addGroup(studentsPanelLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(studentsPanelLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         cardPanel.add(studentsPanel, "studentsCard");
@@ -174,6 +199,30 @@ public class newerMainPage extends javax.swing.JFrame {
         mainpageCardLayout.show(cardPanel, "studentsCard");
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void fetchStudentsDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fetchStudentsDataButtonActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sqlQuery = "SELECT * FROM ICT_12D";
+            st = studentConn.createStatement();
+            rs = st.executeQuery(sqlQuery);
+            
+            DefaultTableModel studentsTableModel = (DefaultTableModel)studentsTable.getModel();
+            studentsTableModel.setRowCount(0);
+            
+            while (rs.next()) {
+                String studentFirstName = String.valueOf(rs.getString("Student_First_Name"));
+                String studentLastName = String.valueOf(rs.getString("Student_Last_Name"));
+                String studentNumber = String.valueOf(rs.getString("Student_Number"));
+                String studentGradeLevel = String.valueOf(rs.getString("Grade_Level"));
+                
+                String studentTbData[] = {studentFirstName, studentLastName, studentNumber, studentGradeLevel};
+                        studentsTableModel.addRow(studentTbData);
+            }  
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_fetchStudentsDataButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -189,14 +238,15 @@ public class newerMainPage extends javax.swing.JFrame {
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JPanel cardPanel;
     private javax.swing.JPanel dashboardPanel;
+    private javax.swing.JButton fetchStudentsDataButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel navPanel;
     private javax.swing.JPanel studentsPanel;
+    private javax.swing.JTable studentsTable;
     // End of variables declaration//GEN-END:variables
 }

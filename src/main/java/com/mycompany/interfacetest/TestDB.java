@@ -26,7 +26,7 @@ public class TestDB extends javax.swing.JFrame {
     Statement st;
     ResultSet rs;
     public TestDB() {
-        conn = InterfaceTest.conn();
+        conn = InterfaceTest.studentConn();
         
         try {
             UIManager.setLookAndFeel( new FlatDarkLaf() );

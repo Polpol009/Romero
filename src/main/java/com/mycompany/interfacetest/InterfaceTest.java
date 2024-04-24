@@ -6,17 +6,29 @@ package com.mycompany.interfacetest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import javax.swing.JOptionPane;
 
 
 public class InterfaceTest {
 
-    public static Connection conn() {
+    public static Connection loginConn() {
         try {
             String url = "jdbc:ucanaccess://C://database//EduSync11.accdb";
             Connection conn = DriverManager.getConnection(url);
             return conn;
         } catch (Exception e) {
-            System.out.println(e);
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return null;
+    }
+    
+    public static Connection studentConn() {
+        try {
+            String url = "jdbc:ucanaccess://C://database//AttendanceSystem.accdb";
+            Connection conn = DriverManager.getConnection(url);
+            return conn;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
         return null;
     }

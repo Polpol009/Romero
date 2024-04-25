@@ -4,7 +4,9 @@
  */
 package com.mycompany.interfacetest;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
@@ -14,11 +16,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 
 public class newerMainPage extends javax.swing.JFrame {
+    
     Connection studentConn;
     PreparedStatement pst;
     Statement st;
@@ -30,7 +37,7 @@ public class newerMainPage extends javax.swing.JFrame {
         FlatRobotoFont.install();
         FlatLaf.registerCustomDefaultsSource("avery.themes");
         UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 14));
-        FlatMacLightLaf.setup();
+        FlatLightLaf.setup();
         
         studentConn = InterfaceTest.studentConn();
         
@@ -38,7 +45,7 @@ public class newerMainPage extends javax.swing.JFrame {
         mainpageCardLayout = (CardLayout)(cardPanel.getLayout());
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked") 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -46,11 +53,13 @@ public class newerMainPage extends javax.swing.JFrame {
         jTextPane1 = new javax.swing.JTextPane();
         backgroundPanel = new javax.swing.JPanel();
         navPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        customizedButton1 = new CustomizedElements.CustomizedButton();
+        customizedButton2 = new CustomizedElements.CustomizedButton();
         jSeparator1 = new javax.swing.JSeparator();
         cardPanel = new javax.swing.JPanel();
         dashboardPanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         studentsPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         studentsTable = new javax.swing.JTable();
@@ -61,38 +70,26 @@ public class newerMainPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync");
 
-        jButton1.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
-        jButton1.setFocusPainted(false);
-        jButton1.setLabel("Dashboard");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        customizedButton1.setBackground(new java.awt.Color(159, 198, 216));
+        customizedButton1.setText("customizedButton1");
 
-        jButton2.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
-        jButton2.setText("Students");
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        customizedButton2.setBackground(new java.awt.Color(159, 198, 216));
+        customizedButton2.setText("customizedButton1");
 
         javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
         navPanel.setLayout(navPanelLayout);
         navPanelLayout.setHorizontalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(customizedButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(customizedButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
         );
         navPanelLayout.setVerticalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(183, 183, 183)
+                .addComponent(customizedButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(customizedButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -100,15 +97,39 @@ public class newerMainPage extends javax.swing.JFrame {
 
         cardPanel.setLayout(new java.awt.CardLayout());
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout dashboardPanelLayout = new javax.swing.GroupLayout(dashboardPanel);
         dashboardPanel.setLayout(dashboardPanelLayout);
         dashboardPanelLayout.setHorizontalGroup(
             dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1020, Short.MAX_VALUE)
+            .addGroup(dashboardPanelLayout.createSequentialGroup()
+                .addGap(315, 315, 315)
+                .addComponent(jButton1)
+                .addGap(75, 75, 75)
+                .addComponent(jButton2)
+                .addContainerGap(516, Short.MAX_VALUE))
         );
         dashboardPanelLayout.setVerticalGroup(
             dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dashboardPanelLayout.createSequentialGroup()
+                .addContainerGap(488, Short.MAX_VALUE)
+                .addGroup(dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(208, 208, 208))
         );
 
         cardPanel.add(dashboardPanel, "dashboardCard");
@@ -189,39 +210,51 @@ public class newerMainPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        mainpageCardLayout.show(cardPanel, "dashboardCard");
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        mainpageCardLayout.show(cardPanel, "studentsCard");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void fetchStudentsDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fetchStudentsDataButtonActionPerformed
         // TODO add your handling code here:
         try {
             String sqlQuery = "SELECT * FROM ICT_12D";
             st = studentConn.createStatement();
             rs = st.executeQuery(sqlQuery);
-            
+
             DefaultTableModel studentsTableModel = (DefaultTableModel)studentsTable.getModel();
             studentsTableModel.setRowCount(0);
-            
+
             while (rs.next()) {
                 String studentFirstName = String.valueOf(rs.getString("Student_First_Name"));
                 String studentLastName = String.valueOf(rs.getString("Student_Last_Name"));
                 String studentNumber = String.valueOf(rs.getString("Student_Number"));
                 String studentGradeLevel = String.valueOf(rs.getString("Grade_Level"));
-                
+
                 String studentTbData[] = {studentFirstName, studentLastName, studentNumber, studentGradeLevel};
-                        studentsTableModel.addRow(studentTbData);
-            }  
+                studentsTableModel.addRow(studentTbData);
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_fetchStudentsDataButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                    SwingUtilities.invokeLater(()-> {
+                    try {
+                        UIManager.setLookAndFeel(new FlatLightLaf());
+                        SwingUtilities.updateComponentTreeUI(this);
+                    } catch (UnsupportedLookAndFeelException ex) {
+                        Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                });
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+                    SwingUtilities.invokeLater(()-> {
+                    try {
+                        UIManager.setLookAndFeel(new FlatDarkLaf());
+                        SwingUtilities.updateComponentTreeUI(this);
+                    } catch (UnsupportedLookAndFeelException ex) {
+                        Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                });
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,6 +270,8 @@ public class newerMainPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JPanel cardPanel;
+    private CustomizedElements.CustomizedButton customizedButton1;
+    private CustomizedElements.CustomizedButton customizedButton2;
     private javax.swing.JPanel dashboardPanel;
     private javax.swing.JButton fetchStudentsDataButton;
     private javax.swing.JButton jButton1;

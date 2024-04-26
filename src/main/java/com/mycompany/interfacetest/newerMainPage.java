@@ -53,8 +53,10 @@ public class newerMainPage extends javax.swing.JFrame {
         jTextPane1 = new javax.swing.JTextPane();
         backgroundPanel = new javax.swing.JPanel();
         navPanel = new javax.swing.JPanel();
-        customizedButton1 = new CustomizedElements.CustomizedButton();
-        customizedButton2 = new CustomizedElements.CustomizedButton();
+        dashboardButtonLabel = new CustomizedElements.CustomizedButton();
+        studentsButtonLabel = new CustomizedElements.CustomizedButton();
+        sectionsButtonLabel = new CustomizedElements.CustomizedButton();
+        attendanceButtonLabel = new CustomizedElements.CustomizedButton();
         jSeparator1 = new javax.swing.JSeparator();
         cardPanel = new javax.swing.JPanel();
         dashboardPanel = new javax.swing.JPanel();
@@ -64,32 +66,61 @@ public class newerMainPage extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         studentsTable = new javax.swing.JTable();
         fetchStudentsDataButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync");
 
-        customizedButton1.setBackground(new java.awt.Color(159, 198, 216));
-        customizedButton1.setText("customizedButton1");
+        dashboardButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        dashboardButtonLabel.setText("Dashboard");
+        dashboardButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        dashboardButtonLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dashboardButtonLabelActionPerformed(evt);
+            }
+        });
 
-        customizedButton2.setBackground(new java.awt.Color(159, 198, 216));
-        customizedButton2.setText("customizedButton1");
+        studentsButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        studentsButtonLabel.setText("Students");
+        studentsButtonLabel.setToolTipText("");
+        studentsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        studentsButtonLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studentsButtonLabelActionPerformed(evt);
+            }
+        });
+
+        sectionsButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        sectionsButtonLabel.setText("Sections");
+        sectionsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+
+        attendanceButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        attendanceButtonLabel.setText("Attendance");
+        attendanceButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
         navPanel.setLayout(navPanelLayout);
         navPanelLayout.setHorizontalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(customizedButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-            .addComponent(customizedButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(dashboardButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(studentsButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(sectionsButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(attendanceButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
         );
         navPanelLayout.setVerticalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navPanelLayout.createSequentialGroup()
                 .addGap(183, 183, 183)
-                .addComponent(customizedButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dashboardButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(customizedButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(studentsButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sectionsButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(attendanceButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -152,27 +183,55 @@ public class newerMainPage extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setText("Filter");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(332, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(194, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout studentsPanelLayout = new javax.swing.GroupLayout(studentsPanel);
         studentsPanel.setLayout(studentsPanelLayout);
         studentsPanelLayout.setHorizontalGroup(
             studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(studentsPanelLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(studentsPanelLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addGap(15, 15, 15))
         );
         studentsPanelLayout.setVerticalGroup(
             studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(studentsPanelLayout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(studentsPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(160, 160, 160)
+                .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(232, 232, 232))
         );
 
         cardPanel.add(studentsPanel, "studentsCard");
@@ -256,6 +315,16 @@ public class newerMainPage extends javax.swing.JFrame {
                 });
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void dashboardButtonLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardButtonLabelActionPerformed
+        // TODO add your handling code here:
+        mainpageCardLayout.show(cardPanel, "dashboardCard");
+    }//GEN-LAST:event_dashboardButtonLabelActionPerformed
+
+    private void studentsButtonLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsButtonLabelActionPerformed
+        // TODO add your handling code here:
+        mainpageCardLayout.show(cardPanel, "studentsCard");
+    }//GEN-LAST:event_studentsButtonLabelActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -268,19 +337,23 @@ public class newerMainPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private CustomizedElements.CustomizedButton attendanceButtonLabel;
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JPanel cardPanel;
-    private CustomizedElements.CustomizedButton customizedButton1;
-    private CustomizedElements.CustomizedButton customizedButton2;
+    private CustomizedElements.CustomizedButton dashboardButtonLabel;
     private javax.swing.JPanel dashboardPanel;
     private javax.swing.JButton fetchStudentsDataButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel navPanel;
+    private CustomizedElements.CustomizedButton sectionsButtonLabel;
+    private CustomizedElements.CustomizedButton studentsButtonLabel;
     private javax.swing.JPanel studentsPanel;
     private javax.swing.JTable studentsTable;
     // End of variables declaration//GEN-END:variables

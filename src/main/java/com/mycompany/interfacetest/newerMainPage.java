@@ -60,6 +60,7 @@ public class newerMainPage extends javax.swing.JFrame {
         studentsButtonLabel = new CustomizedElements.CustomizedButton();
         sectionsButtonLabel = new CustomizedElements.CustomizedButton();
         attendanceButtonLabel = new CustomizedElements.CustomizedButton();
+        avatarBorder1 = new CustomizedElements.AvatarBorder();
         jSeparator1 = new javax.swing.JSeparator();
         cardPanel = new javax.swing.JPanel();
         dashboardPanel = new javax.swing.JPanel();
@@ -68,18 +69,31 @@ public class newerMainPage extends javax.swing.JFrame {
         studentsPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         studentsCardStudentsTable = new javax.swing.JTable();
-        fetchStudentsDataButton = new javax.swing.JButton();
         studentsCardStudentsSearchField = new javax.swing.JTextField();
         studentsCardSearchButton = new javax.swing.JButton();
         studentsCardSectionsCombobox = new javax.swing.JComboBox<>();
         fetchNewDataButton = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        roundedPanel1 = new CustomizedElements.RoundedPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        avatarBorder2 = new CustomizedElements.AvatarBorder();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel4 = new javax.swing.JLabel();
+        gaugeChart1 = new CustomizedElements.GaugeChart();
 
         jScrollPane1.setViewportView(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync");
+        setPreferredSize(new java.awt.Dimension(1288, 720));
+        setResizable(false);
 
-        dashboardButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        navPanel.setBackground(new java.awt.Color(0, 119, 182));
+
+        dashboardButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
+        dashboardButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
         dashboardButtonLabel.setText("Dashboard");
         dashboardButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         dashboardButtonLabel.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +102,8 @@ public class newerMainPage extends javax.swing.JFrame {
             }
         });
 
-        studentsButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        studentsButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
+        studentsButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
         studentsButtonLabel.setText("Students");
         studentsButtonLabel.setToolTipText("");
         studentsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
@@ -98,13 +113,19 @@ public class newerMainPage extends javax.swing.JFrame {
             }
         });
 
-        sectionsButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        sectionsButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
+        sectionsButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
         sectionsButtonLabel.setText("Sections");
         sectionsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
-        attendanceButtonLabel.setBackground(new java.awt.Color(159, 198, 216));
+        attendanceButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
+        attendanceButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
         attendanceButtonLabel.setText("Attendance");
         attendanceButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+
+        avatarBorder1.setGradientColor1(new java.awt.Color(159, 198, 216));
+        avatarBorder1.setGradientColor2(new java.awt.Color(112, 168, 193));
+        avatarBorder1.setImage(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/StockAvatar.jpg"))); // NOI18N
 
         javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
         navPanel.setLayout(navPanelLayout);
@@ -114,11 +135,17 @@ public class newerMainPage extends javax.swing.JFrame {
             .addComponent(studentsButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
             .addComponent(sectionsButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
             .addComponent(attendanceButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(avatarBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42))
         );
         navPanelLayout.setVerticalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(183, 183, 183)
+                .addGap(12, 12, 12)
+                .addComponent(avatarBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dashboardButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(studentsButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -156,7 +183,7 @@ public class newerMainPage extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(75, 75, 75)
                 .addComponent(jButton2)
-                .addContainerGap(516, Short.MAX_VALUE))
+                .addContainerGap(524, Short.MAX_VALUE))
         );
         dashboardPanelLayout.setVerticalGroup(
             dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,13 +208,6 @@ public class newerMainPage extends javax.swing.JFrame {
         jScrollPane2.setViewportView(studentsCardStudentsTable);
         studentsCardStudentsTable.getAccessibleContext().setAccessibleName("");
 
-        fetchStudentsDataButton.setText("Fetch Data");
-        fetchStudentsDataButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fetchStudentsDataButtonActionPerformed(evt);
-            }
-        });
-
         studentsCardSearchButton.setText("Search");
         studentsCardSearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,9 +215,9 @@ public class newerMainPage extends javax.swing.JFrame {
             }
         });
 
-        studentsCardSectionsCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Section", "ICT 12 A", "ICT 12 B", "ICT 12 C", "ICT 12 D", " " }));
+        studentsCardSectionsCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Section", "ICT 12 A", "ICT 12 B", "ICT 12 C", "ICT 12 D" }));
 
-        fetchNewDataButton.setText("Fetch New");
+        fetchNewDataButton.setText("Fetch Data");
         fetchNewDataButton.setToolTipText("");
         fetchNewDataButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,43 +225,130 @@ public class newerMainPage extends javax.swing.JFrame {
             }
         });
 
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        roundedPanel1.setBackground(new java.awt.Color(159, 198, 216));
+        roundedPanel1.setRoundBottomLeft(55);
+        roundedPanel1.setRoundBottomRight(55);
+        roundedPanel1.setRoundTopLeft(55);
+        roundedPanel1.setRoundTopRight(55);
+
+        jLabel1.setFont(new java.awt.Font("Comfortaa", 0, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Avery Manzon");
+
+        jLabel2.setFont(new java.awt.Font("Comfortaa Light", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("05-00-3542");
+
+        avatarBorder2.setBorderSize(2);
+        avatarBorder2.setBorderSpace(2);
+        avatarBorder2.setGradientColor1(new java.awt.Color(0, 0, 0));
+        avatarBorder2.setGradientColor2(new java.awt.Color(0, 0, 0));
+        avatarBorder2.setImage(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/savesta.jpg"))); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Comfortaa Light", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("ICT-12D");
+
+        jLabel4.setFont(new java.awt.Font("Comfortaa", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setText("Attendance Grade");
+
+        gaugeChart1.setColor1(new java.awt.Color(51, 51, 51));
+        gaugeChart1.setColor2(new java.awt.Color(0, 102, 102));
+        gaugeChart1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        gaugeChart1.setGaugeSize(10);
+        gaugeChart1.setValue(70);
+
+        javax.swing.GroupLayout roundedPanel1Layout = new javax.swing.GroupLayout(roundedPanel1);
+        roundedPanel1.setLayout(roundedPanel1Layout);
+        roundedPanel1Layout.setHorizontalGroup(
+            roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(roundedPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator3)
+                    .addGroup(roundedPanel1Layout.createSequentialGroup()
+                        .addComponent(avatarBorder2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(roundedPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel2))
+                            .addGroup(roundedPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel3)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundedPanel1Layout.createSequentialGroup()
+                .addGap(0, 31, Short.MAX_VALUE)
+                .addGroup(roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(253, 253, 253))
+        );
+        roundedPanel1Layout.setVerticalGroup(
+            roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(roundedPanel1Layout.createSequentialGroup()
+                .addGroup(roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(roundedPanel1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3))
+                    .addGroup(roundedPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(avatarBorder2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout studentsPanelLayout = new javax.swing.GroupLayout(studentsPanel);
         studentsPanel.setLayout(studentsPanelLayout);
         studentsPanelLayout.setHorizontalGroup(
             studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createSequentialGroup()
-                .addContainerGap(163, Short.MAX_VALUE)
-                .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                    .addComponent(fetchNewDataButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(161, 161, 161)
-                .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(roundedPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(studentsPanelLayout.createSequentialGroup()
-                        .addComponent(studentsCardSectionsCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(studentsCardSectionsCombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fetchNewDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(studentsCardStudentsSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(studentsCardSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(studentsCardSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15))
         );
         studentsPanelLayout.setVerticalGroup(
             studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(studentsPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(studentsCardStudentsSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(studentsCardSearchButton)
-                    .addComponent(studentsCardSectionsCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(studentsPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 676, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(studentsPanelLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(fetchStudentsDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(fetchNewDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(studentsCardStudentsSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(studentsCardSearchButton)
+                        .addComponent(fetchNewDataButton)
+                        .addComponent(studentsCardSectionsCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 676, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(roundedPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -279,30 +386,6 @@ public class newerMainPage extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void fetchStudentsDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fetchStudentsDataButtonActionPerformed
-        // TODO add your handling code here:
-        try {
-            String sqlQuery = "SELECT * FROM ICT_12D";
-            st = studentConn.createStatement();
-            rs = st.executeQuery(sqlQuery);
-
-            DefaultTableModel studentsTableModel = (DefaultTableModel)studentsCardStudentsTable.getModel();
-            studentsTableModel.setRowCount(0);
-
-            while (rs.next()) {
-                String studentFirstName = String.valueOf(rs.getString("Student_First_Name"));
-                String studentLastName = String.valueOf(rs.getString("Student_Last_Name"));
-                String studentNumber = String.valueOf(rs.getString("Student_Number"));
-                String studentGradeLevel = String.valueOf(rs.getString("Grade_Level"));
-
-                String studentTbData[] = {studentFirstName, studentLastName, studentNumber, studentGradeLevel};
-                studentsTableModel.addRow(studentTbData);
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_fetchStudentsDataButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                     SwingUtilities.invokeLater(()-> {
@@ -475,19 +558,28 @@ public class newerMainPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private CustomizedElements.CustomizedButton attendanceButtonLabel;
+    private CustomizedElements.AvatarBorder avatarBorder1;
+    private CustomizedElements.AvatarBorder avatarBorder2;
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JPanel cardPanel;
     private CustomizedElements.CustomizedButton dashboardButtonLabel;
     private javax.swing.JPanel dashboardPanel;
     private javax.swing.JButton fetchNewDataButton;
-    private javax.swing.JButton fetchStudentsDataButton;
+    private CustomizedElements.GaugeChart gaugeChart1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel navPanel;
+    private CustomizedElements.RoundedPanel roundedPanel1;
     private CustomizedElements.CustomizedButton sectionsButtonLabel;
     private CustomizedElements.CustomizedButton studentsButtonLabel;
     private javax.swing.JButton studentsCardSearchButton;

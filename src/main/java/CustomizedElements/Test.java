@@ -28,6 +28,7 @@ public class Test extends javax.swing.JFrame {
 
         jRadioButton1 = new javax.swing.JRadioButton();
         gradientPanel1 = new CustomizedElements.GradientPanel();
+        gaugeChart1 = new CustomizedElements.GaugeChart();
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -37,6 +38,10 @@ public class Test extends javax.swing.JFrame {
         gradientPanel1.setColorGradient(new java.awt.Color(153, 51, 0));
         gradientPanel1.setRadius(15);
 
+        gaugeChart1.setColor1(new java.awt.Color(207, 22, 22));
+        gaugeChart1.setColor2(new java.awt.Color(0, 153, 0));
+        gaugeChart1.setValue(70);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -44,14 +49,21 @@ public class Test extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(212, 212, 212)
                 .addComponent(gradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(667, Short.MAX_VALUE))
+                .addGap(109, 109, 109)
+                .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(407, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(gradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(190, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(gradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,6 +106,7 @@ public class Test extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private CustomizedElements.GaugeChart gaugeChart1;
     private CustomizedElements.GradientPanel gradientPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     // End of variables declaration//GEN-END:variables

@@ -272,7 +272,7 @@ public class newLoginPage extends javax.swing.JFrame {
 
     private void loginConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginConfirmButtonActionPerformed
         String loginUsername = loginUsernameField.getText();
-        String loginPassword = loginUsernameField.getText();
+        String loginPassword = loginPasswordField.getText();
         
         try {
             String sqlquery = "SELECT * FROM UserLogin WHERE UserName = ? and UserPassword = ?";

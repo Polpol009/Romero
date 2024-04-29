@@ -54,13 +54,8 @@ public class newerMainPage extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        jComboBox1 = new javax.swing.JComboBox<>();
         backgroundPanel = new javax.swing.JPanel();
-        navPanel = new javax.swing.JPanel();
-        dashboardButtonLabel = new CustomizedElements.CustomizedButton();
-        studentsButtonLabel = new CustomizedElements.CustomizedButton();
-        sectionsButtonLabel = new CustomizedElements.CustomizedButton();
-        attendanceButtonLabel = new CustomizedElements.CustomizedButton();
-        avatarBorder1 = new CustomizedElements.AvatarBorder();
         jSeparator1 = new javax.swing.JSeparator();
         cardPanel = new javax.swing.JPanel();
         dashboardPanel = new javax.swing.JPanel();
@@ -82,83 +77,28 @@ public class newerMainPage extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         gaugeChart1 = new CustomizedElements.GaugeChart();
+        sidePanel = new CustomizedElements.GradientPanel();
+        dashboardButtonLabel = new CustomizedElements.CustomizedButton();
+        studentsButtonLabel = new CustomizedElements.CustomizedButton();
+        sectionsButtonLabel = new CustomizedElements.CustomizedButton();
+        attendanceButtonLabel = new CustomizedElements.CustomizedButton();
+        avatarBorder1 = new CustomizedElements.AvatarBorder();
 
         jScrollPane1.setViewportView(jTextPane1);
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduSync");
-        setPreferredSize(new java.awt.Dimension(1288, 720));
         setResizable(false);
 
-        navPanel.setBackground(new java.awt.Color(0, 119, 182));
-
-        dashboardButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
-        dashboardButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
-        dashboardButtonLabel.setText("Dashboard");
-        dashboardButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        dashboardButtonLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dashboardButtonLabelActionPerformed(evt);
-            }
-        });
-
-        studentsButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
-        studentsButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
-        studentsButtonLabel.setText("Students");
-        studentsButtonLabel.setToolTipText("");
-        studentsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        studentsButtonLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studentsButtonLabelActionPerformed(evt);
-            }
-        });
-
-        sectionsButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
-        sectionsButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
-        sectionsButtonLabel.setText("Sections");
-        sectionsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-
-        attendanceButtonLabel.setBackground(new java.awt.Color(0, 180, 216));
-        attendanceButtonLabel.setForeground(new java.awt.Color(60, 63, 65));
-        attendanceButtonLabel.setText("Attendance");
-        attendanceButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-
-        avatarBorder1.setGradientColor1(new java.awt.Color(159, 198, 216));
-        avatarBorder1.setGradientColor2(new java.awt.Color(112, 168, 193));
-        avatarBorder1.setImage(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/StockAvatar.jpg"))); // NOI18N
-
-        javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
-        navPanel.setLayout(navPanelLayout);
-        navPanelLayout.setHorizontalGroup(
-            navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dashboardButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-            .addComponent(studentsButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-            .addComponent(sectionsButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-            .addComponent(attendanceButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(avatarBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-        );
-        navPanelLayout.setVerticalGroup(
-            navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(avatarBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dashboardButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studentsButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sectionsButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(attendanceButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        backgroundPanel.setBackground(new java.awt.Color(35, 35, 48));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         cardPanel.setLayout(new java.awt.CardLayout());
+
+        dashboardPanel.setBackground(new java.awt.Color(35, 35, 48));
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +123,7 @@ public class newerMainPage extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(75, 75, 75)
                 .addComponent(jButton2)
-                .addContainerGap(524, Short.MAX_VALUE))
+                .addContainerGap(516, Short.MAX_VALUE))
         );
         dashboardPanelLayout.setVerticalGroup(
             dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,6 +137,8 @@ public class newerMainPage extends javax.swing.JFrame {
 
         cardPanel.add(dashboardPanel, "dashboardCard");
 
+        studentsPanel.setBackground(new java.awt.Color(35, 35, 48));
+
         studentsCardStudentsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -205,6 +147,7 @@ public class newerMainPage extends javax.swing.JFrame {
                 "First Name", "Last Name", "Student Number", "Grade Level", "Strand"
             }
         ));
+        studentsCardStudentsTable.setGridColor(new java.awt.Color(35, 35, 48));
         jScrollPane2.setViewportView(studentsCardStudentsTable);
         studentsCardStudentsTable.getAccessibleContext().setAccessibleName("");
 
@@ -227,7 +170,7 @@ public class newerMainPage extends javax.swing.JFrame {
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        roundedPanel1.setBackground(new java.awt.Color(159, 198, 216));
+        roundedPanel1.setBackground(new java.awt.Color(119, 119, 176));
         roundedPanel1.setRoundBottomLeft(55);
         roundedPanel1.setRoundBottomRight(55);
         roundedPanel1.setRoundTopLeft(55);
@@ -256,7 +199,7 @@ public class newerMainPage extends javax.swing.JFrame {
         jLabel4.setText("Attendance Grade");
 
         gaugeChart1.setColor1(new java.awt.Color(51, 51, 51));
-        gaugeChart1.setColor2(new java.awt.Color(0, 102, 102));
+        gaugeChart1.setColor2(new java.awt.Color(78, 78, 186));
         gaugeChart1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         gaugeChart1.setGaugeSize(10);
         gaugeChart1.setValue(70);
@@ -283,7 +226,7 @@ public class newerMainPage extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundedPanel1Layout.createSequentialGroup()
-                .addGap(0, 31, Short.MAX_VALUE)
+                .addGap(0, 29, Short.MAX_VALUE)
                 .addGroup(roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
@@ -319,7 +262,7 @@ public class newerMainPage extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentsPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(roundedPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(studentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(studentsPanelLayout.createSequentialGroup()
                         .addComponent(studentsCardSectionsCombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -354,12 +297,65 @@ public class newerMainPage extends javax.swing.JFrame {
 
         cardPanel.add(studentsPanel, "studentsCard");
 
+        sidePanel.setBackground(new java.awt.Color(30, 30, 41));
+        sidePanel.setColorGradient(new java.awt.Color(30, 30, 41));
+        sidePanel.setRadius(15);
+
+        dashboardButtonLabel.setBackground(new java.awt.Color(87, 38, 114));
+        dashboardButtonLabel.setForeground(new java.awt.Color(217, 217, 217));
+        dashboardButtonLabel.setText("Dashboard");
+        dashboardButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        dashboardButtonLabel.setShadowColor(new java.awt.Color(60, 60, 133));
+        dashboardButtonLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dashboardButtonLabelActionPerformed(evt);
+            }
+        });
+        sidePanel.add(dashboardButtonLabel);
+        dashboardButtonLabel.setBounds(0, 200, 240, 61);
+
+        studentsButtonLabel.setBackground(new java.awt.Color(87, 38, 114));
+        studentsButtonLabel.setForeground(new java.awt.Color(204, 204, 204));
+        studentsButtonLabel.setText("Students");
+        studentsButtonLabel.setToolTipText("");
+        studentsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        studentsButtonLabel.setShadowColor(new java.awt.Color(60, 60, 133));
+        studentsButtonLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studentsButtonLabelActionPerformed(evt);
+            }
+        });
+        sidePanel.add(studentsButtonLabel);
+        studentsButtonLabel.setBounds(0, 270, 240, 61);
+
+        sectionsButtonLabel.setBackground(new java.awt.Color(87, 38, 114));
+        sectionsButtonLabel.setForeground(new java.awt.Color(204, 204, 204));
+        sectionsButtonLabel.setText("Sections");
+        sectionsButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        sectionsButtonLabel.setShadowColor(new java.awt.Color(60, 60, 133));
+        sidePanel.add(sectionsButtonLabel);
+        sectionsButtonLabel.setBounds(0, 340, 240, 61);
+
+        attendanceButtonLabel.setBackground(new java.awt.Color(87, 38, 114));
+        attendanceButtonLabel.setForeground(new java.awt.Color(204, 204, 204));
+        attendanceButtonLabel.setText("Attendance");
+        attendanceButtonLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        attendanceButtonLabel.setShadowColor(new java.awt.Color(60, 60, 133));
+        sidePanel.add(attendanceButtonLabel);
+        attendanceButtonLabel.setBounds(0, 410, 240, 61);
+
+        avatarBorder1.setGradientColor1(new java.awt.Color(159, 198, 216));
+        avatarBorder1.setGradientColor2(new java.awt.Color(87, 38, 114));
+        avatarBorder1.setImage(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/StockAvatar.jpg"))); // NOI18N
+        sidePanel.add(avatarBorder1);
+        avatarBorder1.setBounds(40, 20, 170, 150);
+
         javax.swing.GroupLayout backgroundPanelLayout = new javax.swing.GroupLayout(backgroundPanel);
         backgroundPanel.setLayout(backgroundPanelLayout);
         backgroundPanelLayout.setHorizontalGroup(
             backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundPanelLayout.createSequentialGroup()
-                .addComponent(navPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -367,9 +363,9 @@ public class newerMainPage extends javax.swing.JFrame {
         );
         backgroundPanelLayout.setVerticalGroup(
             backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(navPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator1)
             .addComponent(cardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -387,50 +383,20 @@ public class newerMainPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                    SwingUtilities.invokeLater(()-> {
-                    try {
-                        UIManager.setLookAndFeel(new FlatLightLaf());
-                        SwingUtilities.updateComponentTreeUI(this);
-                    } catch (UnsupportedLookAndFeelException ex) {
-                        Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                });
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-                    SwingUtilities.invokeLater(()-> {
-                    try {
-                        UIManager.setLookAndFeel(new FlatDarkLaf());
-                        SwingUtilities.updateComponentTreeUI(this);
-                    } catch (UnsupportedLookAndFeelException ex) {
-                        Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                });
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void studentsButtonLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsButtonLabelActionPerformed
+        // TODO add your handling code here:
+        mainpageCardLayout.show(cardPanel, "studentsCard");
+    }//GEN-LAST:event_studentsButtonLabelActionPerformed
 
     private void dashboardButtonLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardButtonLabelActionPerformed
         // TODO add your handling code here:
         mainpageCardLayout.show(cardPanel, "dashboardCard");
     }//GEN-LAST:event_dashboardButtonLabelActionPerformed
 
-    private void studentsButtonLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsButtonLabelActionPerformed
-        // TODO add your handling code here:
-        mainpageCardLayout.show(cardPanel, "studentsCard");
-    }//GEN-LAST:event_studentsButtonLabelActionPerformed
-
-    private void studentsCardSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsCardSearchButtonActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel ob = (DefaultTableModel) studentsCardStudentsTable.getModel();
-        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(ob);
-        studentsCardStudentsTable.setRowSorter(obj);
-        obj.setRowFilter(RowFilter.regexFilter(studentsCardStudentsSearchField.getText()));
-    }//GEN-LAST:event_studentsCardSearchButtonActionPerformed
-
     private void fetchNewDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fetchNewDataButtonActionPerformed
         // TODO add your handling code here:
-         String selectedSection = (String) studentsCardSectionsCombobox.getSelectedItem();
-        
+        String selectedSection = (String) studentsCardSectionsCombobox.getSelectedItem();
+
         if("ICT 12 A".equals(selectedSection)) {
             System.out.println("Hello A");
             try {
@@ -523,27 +489,57 @@ public class newerMainPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, e);
             }
         }
-//        try {
-//            String sqlQuery = "SELECT * FROM ICT_12D";
-//            st = studentConn.createStatement();
-//            rs = st.executeQuery(sqlQuery);
-//
-//            DefaultTableModel studentsTableModel = (DefaultTableModel)studentsCardStudentsTable.getModel();
-//            studentsTableModel.setRowCount(0);
-//
-//            while (rs.next()) {
-//                String studentFirstName = String.valueOf(rs.getString("Student_First_Name"));
-//                String studentLastName = String.valueOf(rs.getString("Student_Last_Name"));
-//                String studentNumber = String.valueOf(rs.getString("Student_Number"));
-//                String studentGradeLevel = String.valueOf(rs.getString("Grade_Level"));
-//
-//                String studentTbData[] = {studentFirstName, studentLastName, studentNumber, studentGradeLevel};
-//                studentsTableModel.addRow(studentTbData);
-//            }
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, e);
-//        }
+        //        try {
+            //            String sqlQuery = "SELECT * FROM ICT_12D";
+            //            st = studentConn.createStatement();
+            //            rs = st.executeQuery(sqlQuery);
+            //
+            //            DefaultTableModel studentsTableModel = (DefaultTableModel)studentsCardStudentsTable.getModel();
+            //            studentsTableModel.setRowCount(0);
+            //
+            //            while (rs.next()) {
+                //                String studentFirstName = String.valueOf(rs.getString("Student_First_Name"));
+                //                String studentLastName = String.valueOf(rs.getString("Student_Last_Name"));
+                //                String studentNumber = String.valueOf(rs.getString("Student_Number"));
+                //                String studentGradeLevel = String.valueOf(rs.getString("Grade_Level"));
+                //
+                //                String studentTbData[] = {studentFirstName, studentLastName, studentNumber, studentGradeLevel};
+                //                studentsTableModel.addRow(studentTbData);
+                //            }
+            //        } catch (Exception e) {
+            //            JOptionPane.showMessageDialog(null, e);
+            //        }
     }//GEN-LAST:event_fetchNewDataButtonActionPerformed
+
+    private void studentsCardSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsCardSearchButtonActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel ob = (DefaultTableModel) studentsCardStudentsTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(ob);
+        studentsCardStudentsTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(studentsCardStudentsSearchField.getText()));
+    }//GEN-LAST:event_studentsCardSearchButtonActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        SwingUtilities.invokeLater(()-> {
+            try {
+                UIManager.setLookAndFeel(new FlatDarkLaf());
+                SwingUtilities.updateComponentTreeUI(this);
+            } catch (UnsupportedLookAndFeelException ex) {
+                Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        SwingUtilities.invokeLater(()-> {
+            try {
+                UIManager.setLookAndFeel(new FlatLightLaf());
+                SwingUtilities.updateComponentTreeUI(this);
+            } catch (UnsupportedLookAndFeelException ex) {
+                Logger.getLogger(FlatLaftest.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -568,6 +564,7 @@ public class newerMainPage extends javax.swing.JFrame {
     private CustomizedElements.GaugeChart gaugeChart1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -578,9 +575,9 @@ public class newerMainPage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JPanel navPanel;
     private CustomizedElements.RoundedPanel roundedPanel1;
     private CustomizedElements.CustomizedButton sectionsButtonLabel;
+    private CustomizedElements.GradientPanel sidePanel;
     private CustomizedElements.CustomizedButton studentsButtonLabel;
     private javax.swing.JButton studentsCardSearchButton;
     private javax.swing.JComboBox<String> studentsCardSectionsCombobox;

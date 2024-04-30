@@ -140,6 +140,7 @@ public class newMainPage extends javax.swing.JFrame {
         dashboardStudentCountLabel = new javax.swing.JLabel();
         dashboardStudentCountIcon = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        gaugeChart1 = new CustomizedElements.GaugeChart();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -166,6 +167,7 @@ public class newMainPage extends javax.swing.JFrame {
         dashboardMostImprovedMarksLabel = new javax.swing.JLabel();
         dashboardMostImprovedAttendasnceLabel = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        gaugeChart2 = new CustomizedElements.GaugeChart();
         jLabel1 = new javax.swing.JLabel();
 
         jLabel7.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
@@ -320,7 +322,6 @@ public class newMainPage extends javax.swing.JFrame {
         homePageSearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mainPageIcons/newSearch.png"))); // NOI18N
         homeSearchPanel.add(homePageSearchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 40, 40));
 
-        homePageSearchField.setBackground(new java.awt.Color(255, 255, 255));
         homePageSearchField.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         homePageSearchField.setForeground(new java.awt.Color(70, 131, 166));
         homePageSearchField.setBorder(null);
@@ -352,7 +353,6 @@ public class newMainPage extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
         homeMainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 230, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CCSTLOGOFINAL.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         homeMainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 210, -1));
 
@@ -424,18 +424,27 @@ public class newMainPage extends javax.swing.JFrame {
 
         dashboardMainPanel.add(dashboardStudentCountPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 210, 80));
 
+        gaugeChart1.setBackground(new java.awt.Color(255, 51, 51));
+        gaugeChart1.setValue(60);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(103, Short.MAX_VALUE)
+                .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(gaugeChart1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        dashboardMainPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 430, 480));
+        dashboardMainPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 430, 290));
 
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jPanel3.setOpaque(false);
@@ -557,20 +566,26 @@ public class newMainPage extends javax.swing.JFrame {
         dashboardMostImprovedAttendasnceLabel.setText("Most Improved in Attendance");
         jPanel3.add(dashboardMostImprovedAttendasnceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 160, -1));
 
-        dashboardMainPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 340, 250));
+        dashboardMainPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 340, 230));
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 338, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 220, Short.MAX_VALUE)
+            .addGap(0, 218, Short.MAX_VALUE)
         );
 
         dashboardMainPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 340, 220));
+
+        gaugeChart2.setColor1(new java.awt.Color(153, 153, 0));
+        gaugeChart2.setValue(90);
+        dashboardMainPanel.add(gaugeChart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         dashboardBackgroundPanel.add(dashboardMainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 800, 630));
 
@@ -768,6 +783,8 @@ public class newMainPage extends javax.swing.JFrame {
     private javax.swing.JPanel dashboardStudentCountPanel1;
     public javax.swing.JLabel dashboardUsernameLabel;
     private javax.swing.JLabel edusyncSidePanelTitle;
+    private CustomizedElements.GaugeChart gaugeChart1;
+    private CustomizedElements.GaugeChart gaugeChart2;
     private javax.swing.JPanel homeBackgroundPanel;
     private javax.swing.JPanel homeMainPanel;
     private javax.swing.JLabel homePageSearchButton;
